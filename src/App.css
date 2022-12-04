@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+:root {
+  --black: #222222;
+  --gray: #444444;
+  --red: #D2263C;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: var(--gray);
+  font-family: 'Ubuntu', sans-serif;
+  user-select: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.top-panel {
+  position: fixed;
+  top: 0;
+  height: 5vh;
+  width: 100vw;
+  background-color: var(--black);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.page-body {
+  position: relative;
+  top: 5vh;
+}
+
+.name {
+  position: relative;
+  font-size: 24px;
+  font-weight: bold;
   color: white;
+  margin-left: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.name:hover {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.links {
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+.link {
+  margin-right: 10px;
+  font-size: 18px;
+  color: white;
+  padding: 10px;
+}
+
+.link:hover {
+  background-color: white;
+  border-radius: 4px;
+  color: var(--black);
+  cursor: pointer;
 }
