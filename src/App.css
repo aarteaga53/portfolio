@@ -6,6 +6,7 @@
 
 body {
   background-color: var(--gray);
+  background-image: url(../public/background.jpg);
   font-family: 'Ubuntu', sans-serif;
   user-select: none;
 }
@@ -47,6 +48,7 @@ body {
 .link {
   margin-right: 10px;
   font-size: 18px;
+  font-weight: bold;
   color: white;
   padding: 10px;
 }
