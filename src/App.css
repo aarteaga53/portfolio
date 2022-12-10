@@ -6,7 +6,7 @@
 
 body {
   background-color: var(--gray);
-  background-image: url(../public/background.jpg);
+  /* background-image: url(../public/background.jpg); */
   font-family: 'Ubuntu', sans-serif;
   user-select: none;
 }
@@ -23,7 +23,12 @@ body {
 
 .page-body {
   position: relative;
+  height: 90vh;
   top: 5vh;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .name {
@@ -46,6 +51,7 @@ body {
 }
 
 .link {
+  text-decoration: none;
   margin-right: 10px;
   font-size: 18px;
   font-weight: bold;
@@ -54,8 +60,11 @@ body {
 }
 
 .link:hover {
-  background-color: white;
   border-radius: 4px;
-  color: var(--black);
   cursor: pointer;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: bold;
 }
