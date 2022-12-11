@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
+import About from '../pages/About'
+import Contact from '../pages/Contact'
+import Home from '../pages/Home'
 
 const Panel = () => {
     let [color, setColor] = useState('#FFFFFF')
@@ -60,9 +63,9 @@ const Panel = () => {
                 </div>
             </div>
             <Routes>
-                <Route path='home'></Route>
-                <Route path='about'></Route>
-                <Route path='contact'></Route>
+                <Route path='home' element={<Home />}></Route>
+                <Route path='about' element={<About />}></Route>
+                <Route path='contact' element={<Contact />}></Route>
             </Routes>
         </div>
     )
