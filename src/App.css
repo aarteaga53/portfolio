@@ -2,6 +2,7 @@
   --black: #222222;
   --gray: #444444;
   --red: #D2263C;
+  --light-gray: #e4e1e1;
 }
 
 body {
@@ -75,7 +76,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 25px;
   width: 80%;
 }
 
@@ -85,13 +86,41 @@ body {
   background-color: white;
   border-radius: 4px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
+  text-decoration: none;
+  color: var(--black);
 }
 
 .project:hover {
   background-color: var(--red);
   cursor: pointer;
+}
+
+.project-icons {
+  margin-top: 25px;
+  display: flex;
+}
+
+.project-icons a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.project-icons i {
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.project-icons i:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.first-icon {
+  margin-right: 15px;
 }
