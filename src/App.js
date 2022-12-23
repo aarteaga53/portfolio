@@ -1,19 +1,19 @@
 import './App.css'
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Panel from './components/Panel'
+import Home from './components/Home'
+import About from './components/About'
+import Contact from './components/Contact'
 
 function App() {
   return (
-    <Router>
-      <div>
-        {/* <Panel /> */}
-        <Routes>
-          <Route path='/' element={<Navigate to='/home'></Navigate>}></Route>
-          <Route path='/*' element={<Panel />}></Route>
-        </Routes>
-      </div>
-    </Router>
+    <div>
+      <Panel />
+      <Home />
+      <About />
+      <Contact />
+    </div>
   )
 }
 

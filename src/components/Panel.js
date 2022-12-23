@@ -1,8 +1,4 @@
 import React, { useState } from 'react'
-import { Routes, Route, Link } from 'react-router-dom'
-import About from '../pages/About'
-import Contact from '../pages/Contact'
-import Home from '../pages/Home'
 
 const Panel = () => {
     let [color, setColor] = useState('#FFFFFF')
@@ -54,19 +50,11 @@ const Panel = () => {
             <div className='top-panel'>
                 <div className='name' style={{color: color}} onClick={randomColor}>Andrew Arteaga</div>
                 <div className='links'>
-                    <Link to='home' className='link' id='1' style={index === 1 ? style : null} onMouseEnter={enter} onMouseLeave={leave}>Home</Link>
-                    <Link to='about' className='link' id='2' style={index === 2 ? style : null} onMouseEnter={enter} onMouseLeave={leave}>About</Link>
-                    <Link to='contact' className='link' id='3' style={index === 3 ? style : null} onMouseEnter={enter} onMouseLeave={leave}>Contact</Link>
-                    {/* <div className='link' id='1' style={index === 1 ? style : null} onMouseEnter={enter} onMouseLeave={leave}>Home</div>
-                    <div className='link' id='2' style={index === 2 ? style : null} onMouseEnter={enter} onMouseLeave={leave}>About</div>
-                    <div className='link' id='3' style={index === 3 ? style : null} onMouseEnter={enter} onMouseLeave={leave}>Contact</div> */}
+                    <a className='link' href='#home' id='1' style={index === 1 ? style : null} onMouseEnter={enter} onMouseLeave={leave}>Home</a>
+                    <a className='link' href='#about' id='2' style={index === 2 ? style : null} onMouseEnter={enter} onMouseLeave={leave}>About</a>
+                    <a className='link' href='#contact' id='3' style={index === 3 ? style : null} onMouseEnter={enter} onMouseLeave={leave}>Contact</a>
                 </div>
             </div>
-            <Routes>
-                <Route path='home' element={<Home />}></Route>
-                <Route path='about' element={<About />}></Route>
-                <Route path='contact' element={<Contact />}></Route>
-            </Routes>
         </div>
     )
 }

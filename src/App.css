@@ -6,7 +6,8 @@
 }
 
 body {
-  background-color: var(--gray);
+  background-color: var(--black);
+  color: white;
   /* background-image: url(../public/background.jpg); */
   font-family: 'Ubuntu', sans-serif;
   user-select: none;
@@ -18,6 +19,7 @@ body {
   height: 5vh;
   width: 100vw;
   background-color: var(--black);
+  border-bottom: 2px solid var(--red);
   display: flex;
   align-items: center;
   z-index: 1;
@@ -57,8 +59,10 @@ body {
 }
 
 .page-body {
+  background-color: var(--black);
+  color: white;
   position: relative;
-  top: 5vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,10 +70,16 @@ body {
   z-index: 0;
 }
 
+.page-body:first-of-type {
+  top: 5vh;
+  height: 95vh;
+}
+
 .section-title {
   font-size: 64px;
   font-weight: bold;
-  margin: 25px;
+  margin: 50px;
+  color: white;
 }
 
 .projects {
@@ -97,7 +107,11 @@ body {
 
 .project:hover {
   background-color: var(--red);
-  cursor: pointer;
+  /* cursor: pointer; */
+}
+
+#budget_buddy {
+  background-image: url(../public/background.jpg);
 }
 
 .project-icons {
@@ -121,6 +135,36 @@ body {
   cursor: pointer;
 }
 
-.first-icon {
-  margin-right: 15px;
+.image img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-text {
+  margin-top: 25px;
+  font-size: 32px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.profile-link {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 25px;
+}
+
+.profile-link:last-of-type {
+  margin-right: 0;
+}
+
+.profile-link:hover {
+  color: var(--red);
+}
+
+.profile-link:active {
+  color: var(--black);
 }
