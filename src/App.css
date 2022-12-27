@@ -8,7 +8,6 @@
 body {
   background-color: var(--black);
   color: white;
-  /* background-image: url(../public/background.jpg); */
   font-family: 'Ubuntu', sans-serif;
   user-select: none;
 }
@@ -18,10 +17,10 @@ body {
   top: 0;
   height: 5vh;
   width: 100vw;
-  background-color: var(--black);
-  border-bottom: 2px solid var(--red);
   display: flex;
   align-items: center;
+  background-color: var(--black);
+  border-bottom: 2px solid var(--red);
   z-index: 1;
 }
 
@@ -58,34 +57,23 @@ body {
   cursor: pointer;
 }
 
-.home-body {
-  /* width: 100vw; */
-  padding-top: 25px;
-  background-color: var(--black);
-  color: white;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 0;
-}
-
 .page-body {
-  background-color: var(--black);
-  color: white;
+  top: 5vh;
+  padding-bottom: 5vh;
   position: relative;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  background-color: var(--black);
+  color: white;
+  padding-top: 50px;
   z-index: 0;
 }
 
 .section-title {
   font-size: 64px;
   font-weight: bold;
-  margin: 50px;
+  margin-bottom: 50px;
   color: white;
 }
 
@@ -148,10 +136,37 @@ body {
 }
 
 .about-text {
-  margin-top: 25px;
+  /* margin-top: 25px; */
   font-size: 32px;
   font-weight: bold;
   font-style: italic;
+}
+
+.contact-body {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
+.contact-input {
+  margin-bottom: 5px;
+}
+
+.contact-input {
+  border: 2px solid var(--red); 
+  border-radius: 4px;
+  padding: 12px 20px;
+  background-color: var(--black);
+  color: white;
+  font-size: 18px;
+}
+
+.contact-input:focus {
+  outline: none;
+}
+
+.profile-links {
+  margin-bottom: 35px;
 }
 
 .profile-link {
@@ -175,21 +190,21 @@ body {
 }
 
 @media only screen and (max-width: 768px)  {
-  .top-panel {
-    height: 10vh;
-  }
+  .top-panel { height: 10vh; }
 
-  .project-card {
-    width: 100%;
-  }
+  .page-body { top: 10vh; padding-bottom: 10vh; } 
+
+  .project-card { width: 100%; }
+
+  .contact-body { width: 90%; }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1800px)  {
-  .top-panel {
-    height: 8vh;
-  }
+  .top-panel { height: 8vh; }
 
-  .project-card {
-    width: 25%;
-  }
+  .page-body { top: 8vh; padding-bottom: 8vh; }
+
+  .project-card { width: 25%; }
+
+  .contact-body { width: 40%; }
 }
