@@ -1,6 +1,5 @@
 import './App.css'
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import Panel from './components/Panel'
 import Home from './components/Home'
 import About from './components/About'

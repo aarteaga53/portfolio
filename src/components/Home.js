@@ -5,7 +5,7 @@ import myNotes from '../images/mynotes.png'
 
 const Home = () => {
     return (
-        <div className='page-body' id='home'>
+        <div className='home-body' id='home'>
             <div className='section-title'>Home</div>
             <div className='projects'>
                 <Project 
