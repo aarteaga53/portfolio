@@ -7,8 +7,7 @@ const Contact = () => {
                 <div className='section-title'>Contact</div>
                 <div className='profile-links'>
                     <a className='profile-link' href='https://github.com/aarteaga53' target='_blank' rel='noopener noreferrer'><i className='fa fa-github'></i> GitHub</a>
-                    {/* <a className='profile-link' href='mailto:andrewarteaga123@gmail.com'><i className='fa fa-at'></i> Email</a>
-                    <a className='profile-link' href='tel:626-677-1809'><i className='fa fa-mobile'></i> Phone</a> */}
+                    <a className='profile-link' href='mailto:andrewarteaga123@gmail.com'><i className='fa fa-at'></i> Email</a>
                 </div>
                 <div className='contact-body'>
                     <input className='contact-input' type='text' placeholder='Name'></input>

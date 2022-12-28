@@ -135,11 +135,16 @@ body {
   cursor: pointer;
 }
 
-.about-text {
-  /* margin-top: 25px; */
+.about-sub {
   font-size: 32px;
   font-weight: bold;
   font-style: italic;
+  margin-bottom: 25px;
+}
+
+.about-text {
+  width: 30%;
+  font-size: 18px;
 }
 
 .contact-body {
@@ -150,9 +155,6 @@ body {
 
 .contact-input {
   margin-bottom: 5px;
-}
-
-.contact-input {
   border: 2px solid var(--red); 
   border-radius: 4px;
   padding: 12px 20px;

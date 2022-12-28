@@ -1,6 +1,6 @@
 import React from 'react'
 import Project from '../components/Project'
-import budgetBuddy from '../images/budget-buddy.jpg'
+import budgetBuddy from '../images/budget.png'
 import myNotes from '../images/mynotes.png'
 
 const Home = () => {
@@ -35,12 +35,12 @@ const Home = () => {
                         web='https://www.kaggle.com/competitions/cs4210-summer2022-assignment-2/leaderboard'
                         text='Facial expression recognition model using PyTorch.'
                     />
-                    <Project 
+                    {/* <Project 
                         title='Team Website' 
                         git='https://github.com/Group-Saber/team_site' 
                         web='http://cs480-projects.github.io/teams-fall2022/Saber/index.html'
                         text='Team members that I worked with on Budget Buddy.'
-                        />
+                    /> */}
                 </div>
             </div>
         </div>
