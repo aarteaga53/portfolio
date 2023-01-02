@@ -143,8 +143,10 @@ body {
 }
 
 .about-text {
-  width: 30%;
+  width: 40%;
   font-size: 18px;
+  text-align: justify;
+  text-justify: auto;
 }
 
 .contact-body {
