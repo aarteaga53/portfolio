@@ -1,6 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Contact = () => {
+    let [name, setName] = useState('')
+    let [email, setEmail] = useState('')
+    let [message, setMessage] = useState('')
+
+    let sendMessage = async () => {
+        if(name !== '' && email !== '' && message !== '') {
+            let response = await fetch(`http://127.0.0.1:8000/message/send`, {
+                method: "POST",
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify({name: name, email: email, message: message})
+            })
+
+            console.log(response)
+            // add alert that lets you know if message was sent
+        }
+    }
+
+    let handleChange = (e) => {
+        switch(e.target.id) {
+            case'name':
+                setName(e.target.value)
+                break
+            case'email':
+                setEmail(e.target.value)
+                break
+            case'message':
+                setMessage(e.target.value)
+                break
+            default:
+                break
+        }
+    }
+
     return (
         <div id='contact'>
             <div className='page-body'>
@@ -10,11 +45,11 @@ const Contact = () => {
                     <a className='profile-link' href='mailto:andrewarteaga123@gmail.com'><i className='fa fa-at'></i> Email</a>
                 </div>
                 <div className='contact-body'>
-                    <input className='contact-input' type='text' placeholder='Name'></input>
-                    <input className='contact-input' type='text' placeholder='Email'></input>
-                    <textarea className='contact-input' rows='10' placeholder='Message'></textarea>
+                    <input className='contact-input' id='name' type='text' placeholder='Name' onChange={handleChange}></input>
+                    <input className='contact-input' id='email' type='text' placeholder='Email' onChange={handleChange}></input>
+                    <textarea className='contact-input' id='message' rows='10' placeholder='Message' onChange={handleChange}></textarea>
                 </div>
-                <div className='button'>Send</div>
+                <div className='button' onClick={sendMessage}>Send</div>
             </div>
         </div>
     )
