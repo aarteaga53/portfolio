@@ -1,6 +1,7 @@
 require('dotenv').config({ path: './config.env' })
 
 const express = require('express')
+var favicon = require('serve-favicon')
 const path = require('path')
 const cors = require('cors')
 const app = express()
@@ -16,6 +17,7 @@ app.use('/', dbRoutes)
 
 const root = path.join(__dirname, '../frontend', 'build')
 app.use(express.static(root))
+app.use(favicon(path.join(__dirname, '../frontend', 'build', 'favicon.ico')))
 
 app.get('/hello', (req, res) => {
   res.json({msg: 'Hello, World!'})
