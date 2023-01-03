@@ -26,15 +26,20 @@ const Login = () => {
     }
 
     return (
-        <div className="login-page">
-            <div className="login-box">
-                <div className="login-title">Login</div>
-                <div className="login-body">
-                    <input className="contact-input" id='email' type='text' placeholder="Email" onChange={handleChange}></input>
-                    <input className="contact-input" id='password' type='password' placeholder="Password" onChange={handleChange}></input>
+        <div>
+            <div className='top-panel'>
+                <div className='name' onClick={() => navigate('/')}>Andrew Arteaga</div>
+            </div>
+            <div className="page-body">
+                <div className="login-box">
+                    <div className="login-title">Welcome Andrew</div>
+                    <div className="login-body">
+                        <input className="contact-input" id='email' type='text' placeholder="Email" onChange={handleChange}></input>
+                        <input className="contact-input" id='password' type='password' placeholder="Password" onChange={handleChange}></input>
+                    </div>
+                    <div className='button' onClick={() => navigate(-1)}>Back</div>
+                    <div className='button' onClick={login}>Login</div>
                 </div>
-                <div className='button' onClick={() => navigate(-1)}>Back</div>
-                <div className='button' onClick={login}>Login</div>
             </div>
         </div>
     )

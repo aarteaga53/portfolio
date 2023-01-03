@@ -9,7 +9,7 @@ const Account = () => {
         let getMessages = async () => {
             let response = await fetch(`http://127.0.0.1:8000/messages`)
             let data = await response.json()
-            setMessages(data)
+            setMessages(data.reverse())
         }   
 
         getMessages()
@@ -43,10 +43,10 @@ const Account = () => {
                     <div className='msg-card' key={index}>
                         <div className='msg-heading'>
                             <div className='msg-name'>{msg.name}</div>
-                            <div className='msg-name'>{formatDate(new Date(msg.date))}</div>
+                            <div className='msg-date'>{formatDate(new Date(msg.date))}</div>
                         </div>
-                        <div className='msg-text'>{msg.email}</div>
-                        <div className='msg-text'>{msg.message}</div>
+                        <div className='msg-email'>{msg.email}</div>
+                        <div className='msg-body'>{msg.message}</div>
                     </div>
                 ))}
             </div>
