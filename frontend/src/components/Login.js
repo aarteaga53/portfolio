@@ -8,7 +8,7 @@ const Login = () => {
 
     let login = async () => {
         if(username !== '' && password !== '') {
-            let response = await fetch(`http://127.0.0.1:8000/login`, {
+            let response = await fetch(`http://127.0.0.1:8000/admin`, {
                 method: "POST",
                 headers: {
                     'Content-type': 'application/json'
