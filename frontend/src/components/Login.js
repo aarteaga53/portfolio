@@ -2,20 +2,32 @@ import React, { useState } from "react"
 import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
-    let [email, setEmail] = useState('')
+    let [username, setUsername] = useState('')
     let [password, setPassword] = useState('')
     let navigate = useNavigate()
 
-    let login = () => {
-        if(email !== '' && password !== '') {
-            navigate('/account')
+    let login = async () => {
+        if(username !== '' && password !== '') {
+            let response = await fetch(`http://127.0.0.1:8000/login`, {
+                method: "POST",
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify({username: username, password: password})
+            })
+
+            let data = await response.json()
+
+            if(data.msg === 'success') {
+                navigate('/account')
+            }
         }
     }
 
     let handleChange = (e) => {
         switch(e.target.id) {
-            case'email':
-                setEmail(e.target.value)
+            case'username':
+                setUsername(e.target.value)
                 break
             case'password':
                 setPassword(e.target.value)
@@ -34,7 +46,7 @@ const Login = () => {
                 <div className="login-box">
                     <div className="login-title">Welcome Andrew</div>
                     <div className="login-body">
-                        <input className="contact-input" id='email' type='text' placeholder="Email" onChange={handleChange}></input>
+                        <input className="contact-input" id='username' type='text' placeholder="Username" onChange={handleChange}></input>
                         <input className="contact-input" id='password' type='password' placeholder="Password" onChange={handleChange}></input>
                     </div>
                     <div className='login-buttons'>

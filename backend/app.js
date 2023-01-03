@@ -6,6 +6,7 @@ const app = express()
 const port = 8000
 const dbo = require('./db/conn')
 const dbRoutes = require('./routes/record.js')
+const fs = require('fs')
 
 app.use(cors())
 app.use(require('body-parser').json())
@@ -14,6 +15,25 @@ app.use('/', dbRoutes)
 
 app.get('/hello', (req, res) => {
 	res.json({msg: 'Hello, World!'})
+})
+
+app.post('/login', (req, res) => {
+    fs.readFile('user.txt', 'utf8', (err, data) => {
+        if (err) {
+          console.error(err);
+          res.json({msg: 'error'})
+          return;
+        }
+        
+        const user = data.substring(0, data.indexOf('\n') - 1)
+        const pass = data.substring(data.indexOf('\n') + 1)
+
+        if(req.body.username === user && req.body.password === pass) {
+            res.json({msg: 'success'})
+        } else {
+            res.json({msg: 'error'})
+        }
+      });
 })
 
 const MongoClient = require('mongodb').MongoClient
