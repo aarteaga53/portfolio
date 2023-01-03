@@ -143,7 +143,7 @@ body {
 }
 
 .about-text {
-  width: 40%;
+  width: 30%;
   font-size: 18px;
   text-align: justify;
   text-justify: auto;
@@ -195,7 +195,6 @@ body {
 
 .login-box {
   width: 20%;
-  padding: 50px;
   background-color: var(--black);
   border: 2px solid var(--red);
   border-radius: 4px;
@@ -206,12 +205,18 @@ body {
   font-weight: bold;
   color: white;
   text-align: center;
-  margin-bottom: 50px;
+  margin: 50px 0;
 }
 
 .login-body {
   display: flex;
   flex-direction: column;
+  margin: 0 25px;
+}
+
+.login-buttons {
+  margin: 25px;
+  margin-top: 0;
 }
 
 .msg-card {
@@ -257,9 +262,13 @@ body {
 
   .project-card { width: 100%; }
 
+  .about-text { width: 90%; }
+
   .contact-body { width: 90%; }
 
-  .login-box { width: 80%; }
+  .login-box { width: 90%; }
+
+  .msg-card { width: 90%; }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1800px)  {
@@ -269,7 +278,11 @@ body {
 
   .project-card { width: 25%; }
 
+  .about-text { width: 40%; }
+
   .contact-body { width: 40%; }
 
-  .login-box { width: 30%; }
+  .login-box { width: 40%; }
+
+  .msg-card { width: 40%; }
 }

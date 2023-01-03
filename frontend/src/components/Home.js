@@ -5,9 +5,9 @@ import myNotes from '../images/mynotes.png'
 
 const Home = () => {
     return (
-        <div id='home'>
+        <div id='projects'>
             <div className='page-body'>
-                <div className='section-title'>Home</div>
+                <div className='section-title'>Projects</div>
                 <div className='projects'>
                     <Project 
                         image={budgetBuddy} 

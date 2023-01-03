@@ -55,11 +55,11 @@ const Panel = () => {
             <div className='top-panel'>
                 <div className='name' style={{color: color}} onClick={() => navigate('/login')}>Andrew Arteaga</div>
                 <div className='links'>
-                    <a className='link' href='#home' id='1' 
+                    <a className='link' href='#projects' id='1' 
                         style={index === 1 ? style : null} 
                         onMouseEnter={enter} onMouseLeave={leave}
                         onClick={randomColor}
-                    >Home</a>
+                    >Projects</a>
                     <a className='link' href='#about' id='2' 
                         style={index === 2 ? style : null} 
                         onMouseEnter={enter} onMouseLeave={leave}

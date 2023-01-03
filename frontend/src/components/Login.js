@@ -37,8 +37,10 @@ const Login = () => {
                         <input className="contact-input" id='email' type='text' placeholder="Email" onChange={handleChange}></input>
                         <input className="contact-input" id='password' type='password' placeholder="Password" onChange={handleChange}></input>
                     </div>
-                    <div className='button' onClick={() => navigate(-1)}>Back</div>
-                    <div className='button' onClick={login}>Login</div>
+                    <div className='login-buttons'>
+                        <div className='button' onClick={() => navigate(-1)}>Back</div>
+                        <div className='button' onClick={login}>Login</div>
+                    </div>
                 </div>
             </div>
         </div>
