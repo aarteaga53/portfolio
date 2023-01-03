@@ -1,18 +1,21 @@
 import './App.css'
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Panel from './components/Panel'
-import Home from './components/Home'
-import About from './components/About'
-import Contact from './components/Contact'
+import Login from './components/Login'
+import Account from './components/Account'
 
 function App() {
   return (
-    <div>
-      <Panel />
-      <Home />
-      <About />
-      <Contact />
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path='/' element={<Panel />}></Route>
+          <Route path='/login' element={<Login />}></Route>
+          <Route path='/account' element={<Account />}></Route>
+        </Routes>
+      </div>
+    </Router>
   )
 }
 

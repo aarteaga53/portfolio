@@ -1,10 +1,15 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import Home from './Home'
+import About from './About'
+import Contact from './Contact'
 
 const Panel = () => {
     let [color, setColor] = useState('#FFFFFF')
     let [contrast, setContrast] = useState('#000000')
     let [index, setIndex] = useState(0)
     let [style, setStyle] = useState({color: contrast, backgroundColor: color})
+    let navigate = useNavigate()
 
     /**
      * generates six random characters from a string to
@@ -48,13 +53,28 @@ const Panel = () => {
     return (
         <div>
             <div className='top-panel'>
-                <div className='name' style={{color: color}} onClick={randomColor}>Andrew Arteaga</div>
+                <div className='name' style={{color: color}} onClick={() => navigate('/login')}>Andrew Arteaga</div>
                 <div className='links'>
-                    <a className='link' href='#home' id='1' style={index === 1 ? style : null} onMouseEnter={enter} onMouseLeave={leave}>Home</a>
-                    <a className='link' href='#about' id='2' style={index === 2 ? style : null} onMouseEnter={enter} onMouseLeave={leave}>About</a>
-                    <a className='link' href='#contact' id='3' style={index === 3 ? style : null} onMouseEnter={enter} onMouseLeave={leave}>Contact</a>
+                    <a className='link' href='#home' id='1' 
+                        style={index === 1 ? style : null} 
+                        onMouseEnter={enter} onMouseLeave={leave}
+                        onClick={randomColor}
+                    >Home</a>
+                    <a className='link' href='#about' id='2' 
+                        style={index === 2 ? style : null} 
+                        onMouseEnter={enter} onMouseLeave={leave}
+                        onClick={randomColor}
+                    >About</a>
+                    <a className='link' href='#contact' id='3' 
+                        style={index === 3 ? style : null} 
+                        onMouseEnter={enter} onMouseLeave={leave}
+                        onClick={randomColor}
+                    >Contact</a>
                 </div>
             </div>
+            <Home />
+            <About />
+            <Contact />
         </div>
     )
 }

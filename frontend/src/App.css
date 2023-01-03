@@ -156,7 +156,7 @@ body {
 }
 
 .contact-input {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   border: 2px solid var(--red); 
   border-radius: 4px;
   padding: 12px 20px;
@@ -191,6 +191,67 @@ body {
 
 .profile-link:active {
   color: var(--black);
+}
+
+.login-page {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+}
+
+.login-box {
+  width: 30%;
+  padding: 50px;
+  background-color: var(--black);
+  border: 2px solid var(--red);
+  border-radius: 4px;
+}
+
+.login-title {
+  font-size: 32px;
+  color: white;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.login-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-body {
+  position: relative;
+  top: 10vh;
+}
+
+.msg-card {
+  width: 40%;
+  border: 2px solid var(--red);
+  border-radius: 4px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.msg-heading {
+  display: flex;
+}
+
+.msg-name {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.msg-name:last-of-type {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.msg-text {
+  margin-bottom: 15px;
 }
 
 @media only screen and (max-width: 768px)  {
