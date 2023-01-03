@@ -13,7 +13,7 @@ const Home = () => {
                         image={budgetBuddy} 
                         title='Budget Buddy' 
                         git='https://github.com/Group-Saber/saber-budget-buddy' 
-                        web='http://saberandrewarteaga.com'
+                        web='http://saber.andrewarteaga.com'
                         text='Web applicaton to keep track of your budget and debts.' 
                     />
                     <Project 
@@ -26,7 +26,7 @@ const Home = () => {
                     <Project 
                         title='Portfolio' 
                         git='https://github.com/aarteaga53/portfolio' 
-                        web='http://andrewarteaga.com'
+                        web='http://www.andrewarteaga.com'
                         text='Web application to showcase my projects.'
                     />
                     <Project 
