@@ -36,10 +36,12 @@ recordRoutes.route("/message/send").post(function (req, res) {
       .collection("contacts")
       .insertOne(matchDocument, function (err, result) {
         if (err) {
-          res.status(400).send("Error sending message!")
+          // res.status(400).send("Error sending message!")
+          res.json({ msg: 'error' })
         } else {
           console.log(`Added a new message with id ${result.insertedId}`)
-          res.status(204).send()
+          // res.status(204).send()
+          res.json({ msg: 'success' })
         }
     })
 })

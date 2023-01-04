@@ -15,7 +15,16 @@ const Contact = () => {
                 body: JSON.stringify({name: name, email: email, message: message})
             })
 
-            console.log(response)
+            let data = await response.json()
+
+            if(data.msg === 'success') {
+                document.getElementById('name').value = ''
+                document.getElementById('email').value = ''
+                document.getElementById('message').value = ''
+                setName('')
+                setEmail('')
+                setMessage('')
+            }
             // add alert that lets you know if message was sent
         }
     }

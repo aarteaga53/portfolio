@@ -245,7 +245,7 @@ body {
 
 .msg-email {
   border: 2px solid var(--red);
-  padding: 15px;
+  padding: 25px;
 }
 
 .msg-body {
