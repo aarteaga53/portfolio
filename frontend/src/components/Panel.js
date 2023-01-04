@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Home from './Home'
+import Projects from './Projects'
 import About from './About'
 import Contact from './Contact'
 
@@ -72,7 +72,7 @@ const Panel = () => {
                     >Contact</a>
                 </div>
             </div>
-            <Home />
+            <Projects />
             <About />
             <Contact />
         </div>

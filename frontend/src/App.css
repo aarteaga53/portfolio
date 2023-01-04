@@ -99,6 +99,7 @@ body {
 
 .project-body {
   padding: 10px;
+  border-top: 2px solid var(--red);
   /* background-color: var(--gray); */
 }
 

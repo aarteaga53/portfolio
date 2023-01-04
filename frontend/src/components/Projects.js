@@ -1,9 +1,11 @@
 import React from 'react'
 import Project from '../components/Project'
-import budgetBuddy from '../images/budget.png'
-import myNotes from '../images/mynotes.png'
+import budgetBuddy from '../images/budgetbuddy.png'
+import myNotes from '../images/list.jpg'
+import porftolio from '../images/portfolio.png'
+import machine from '../images/machine.png'
 
-const Home = () => {
+const Projects = () => {
     return (
         <div id='projects'>
             <div className='page-body'>
@@ -24,12 +26,14 @@ const Home = () => {
                         text='Mobile application to store and organize school notes.'
                     />
                     <Project 
+                        image={porftolio}
                         title='Portfolio' 
                         git='https://github.com/aarteaga53/portfolio' 
                         web='http://www.andrewarteaga.com'
                         text='Web application to showcase my projects.'
                     />
                     <Project 
+                        image={machine}
                         title='Machine Learning' 
                         git='https://github.com/aarteaga53/facial_expression_recognition'
                         web='https://www.kaggle.com/competitions/cs4210-summer2022-assignment-2/leaderboard'
@@ -47,4 +51,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Projects
