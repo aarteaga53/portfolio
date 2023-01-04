@@ -34,6 +34,6 @@ option = chooseAddress()
     
 match option:
     case '1':
-        changeAddress('https://andrewarteaga.com:8000', 'http://127.0.0.1:8000')
+        changeAddress('andrewarteaga.com:8000', '127.0.0.1:8000')
     case '2':
-        changeAddress('http://127.0.0.1:8000', 'https://andrewarteaga.com:8000')
+        changeAddress('127.0.0.1:8000', 'andrewarteaga.com:8000')
