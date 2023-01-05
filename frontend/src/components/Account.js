@@ -7,6 +7,9 @@ const Account = () => {
     let navigate = useNavigate()
 
     useEffect(() => {
+        /**
+         * get all messages sent from database
+         */
         let getMessages = async () => {
             let response = await fetch(`http://127.0.0.1:8000/messages`)
             let data = await response.json()
@@ -33,6 +36,11 @@ const Account = () => {
         return newDate
     }
 
+    /**
+     * delete a message from database
+     * 
+     * @param {*} index 
+     */
     let deleteMessage = async (index) => {
         let response = await fetch(`http://127.0.0.1:8000/messages/delete/${messages[index]._id}`, { method: "DELETE" })
 

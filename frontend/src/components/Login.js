@@ -6,6 +6,9 @@ const Login = () => {
     let [password, setPassword] = useState('')
     let navigate = useNavigate()
 
+    /**
+     * login into admin page
+     */
     let login = async () => {
         if(username !== '' && password !== '') {
             let response = await fetch(`http://127.0.0.1:8000/admin`, {
@@ -24,6 +27,11 @@ const Login = () => {
         }
     }
 
+    /**
+     * update the variables based on the input box that was changed
+     * 
+     * @param {*} e 
+     */
     let handleChange = (e) => {
         switch(e.target.id) {
             case'username':

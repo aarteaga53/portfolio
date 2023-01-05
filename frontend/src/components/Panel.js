@@ -41,11 +41,17 @@ const Panel = () => {
         return (Number(`0x1${hex}`) ^ 0xFFFFFF).toString(16).substring(1)
     }
 
+    /**
+     * determine which button is being hovered over
+     * @param {*} e 
+     */
     let enter = (e) => {
-        // setStyle({color: color, backgroundColor: contrast})
         setIndex(parseInt(e.target.id))
     }
 
+    /**
+     * set hovering to none
+     */
     let leave = () => {
         setIndex(0)
     }

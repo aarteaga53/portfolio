@@ -5,6 +5,9 @@ const Contact = () => {
     let [email, setEmail] = useState('')
     let [message, setMessage] = useState('')
 
+    /**
+     * send a message to database
+     */
     let sendMessage = async () => {
         if(name !== '' && email !== '' && message !== '') {
             let response = await fetch(`http://127.0.0.1:8000/message/send`, {
