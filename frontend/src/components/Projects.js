@@ -16,7 +16,7 @@ const Projects = () => {
                         title='Budget Buddy' 
                         git='https://github.com/Group-Saber/saber-budget-buddy' 
                         web='https://saber.andrewarteaga.com'
-                        text='Web applicaton to keep track of your budget and debts.' 
+                        text='Web applicaton to keep track of your budget and debt.' 
                     />
                     <Project 
                         image={myNotes} 
@@ -38,7 +38,12 @@ const Projects = () => {
                         git='https://github.com/aarteaga53/facial_expression_recognition'
                         web='https://www.kaggle.com/competitions/cs4210-summer2022-assignment-2/leaderboard'
                         text='Facial expression recognition model using PyTorch.'
-                    />
+                        />
+                    {/* <Project 
+                        title='Film Forum'
+                        git='https://github.com/aarteaga53/film-forum'
+                        text='In progress...'
+                    /> */}
                     {/* <Project 
                         title='Team Website' 
                         git='https://github.com/Group-Saber/team_site' 
