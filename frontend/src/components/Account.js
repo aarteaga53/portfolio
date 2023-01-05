@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const Account = () => {
     let [messages, setMessages] = useState([])
@@ -32,6 +33,19 @@ const Account = () => {
         return newDate
     }
 
+    let deleteMessage = async (index) => {
+        let response = await fetch(`http://127.0.0.1:8000/messages/delete/${messages[index]._id}`, { method: "DELETE" })
+
+        let data = await response.json()
+
+        if(data.msg === 'success') {
+            setMessages(messages => [
+                ...messages.slice(0, index),
+                ...messages.slice(index + 1, messages.length)
+            ])
+        }
+    }
+
     return (
         <div>
             <div className='top-panel'>
@@ -44,6 +58,7 @@ const Account = () => {
                         <div className='msg-heading'>
                             <div className='msg-name'>{msg.name}</div>
                             <div className='msg-date'>{formatDate(new Date(msg.date))}</div>
+                            <div className='icon' onClick={() => deleteMessage(index)}><DeleteIcon /></div>
                         </div>
                         <div className='msg-email'>{msg.email}</div>
                         <div className='msg-body'>{msg.message}</div>

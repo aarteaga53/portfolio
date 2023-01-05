@@ -1,4 +1,5 @@
 const express = require("express")
+const ObjectId = require('mongodb').ObjectId
 
 // recordRoutes is an instance of the express router.
 // We use it to define our routes.
@@ -7,6 +8,7 @@ const recordRoutes = express.Router()
 
 // This will help us connect to the database
 const dbo = require('../db/conn');
+
 
 recordRoutes.route("/messages").get(async function (req, res) {
     const dbConnect = dbo.getDb()
@@ -68,16 +70,18 @@ recordRoutes.route("/messages/updateMessages").post(function (req, res) {
 
 recordRoutes.route("/messages/delete/:id").delete((req, res) => {
     const dbConnect = dbo.getDb()
-    const listingQuery = { name: req.params.id }
+    const message = { _id: new ObjectId(req.params.id) }
   
     dbConnect
       .collection("contacts")
-      .deleteOne(listingQuery, function (err, _result) {
+      .deleteOne(message, function (err, _result) {
         if (err) {
-          res.status(400).send(`Error deleting name with id ${listingQuery.name}!`)
+          // res.status(400).send(`Error deleting name with id ${listingQuery._id}!`)
+          console.log(`Error deleting name with id ${message._id}!`)
+          res.json({ msg: 'error' })
         } else {
           console.log("1 document deleted")
-          res.json({ result: 'success' })
+          res.json({ msg: 'success' })
         }
     })
 })
