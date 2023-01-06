@@ -23,7 +23,7 @@ app.get('/hello', (req, res) => {
   res.json({msg: 'Hello, World!'})
 })
 
-app.post('/admin', (req, res) => {
+app.post('/adminLogin', (req, res) => {
   fs.readFile('user.txt', 'utf8', (err, data) => {
     if (err) {
       console.error(err);

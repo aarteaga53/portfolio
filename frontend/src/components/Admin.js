@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import DeleteIcon from '@mui/icons-material/Delete';
 
-const Account = () => {
+const Admin = () => {
     let [messages, setMessages] = useState([])
     let navigate = useNavigate()
 
@@ -77,4 +77,4 @@ const Account = () => {
     )
 }
 
-export default Account
+export default Admin

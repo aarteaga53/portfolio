@@ -7,7 +7,7 @@ const ObjectId = require('mongodb').ObjectId
 const recordRoutes = express.Router()
 
 // This will help us connect to the database
-const dbo = require('../db/conn');
+const dbo = require('../db/conn')
 
 
 recordRoutes.route("/messages").get(async function (req, res) {
@@ -22,8 +22,8 @@ recordRoutes.route("/messages").get(async function (req, res) {
         } else {
           res.json(result)
         }
-    });
-});
+    })
+})
 
 recordRoutes.route("/message/send").post(function (req, res) {
     const dbConnect = dbo.getDb()
