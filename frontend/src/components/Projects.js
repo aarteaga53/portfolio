@@ -4,6 +4,7 @@ import budgetBuddy from '../images/budgetbuddy.png'
 import myNotes from '../images/list.jpg'
 import porftolio from '../images/portfolio.png'
 import machine from '../images/machine.png'
+import pss from '../images/pss.png'
 
 const Projects = () => {
     return (
@@ -38,7 +39,7 @@ const Projects = () => {
                         git='https://github.com/aarteaga53/facial_expression_recognition'
                         web='https://www.kaggle.com/competitions/cs4210-summer2022-assignment-2/leaderboard'
                         text='Facial expression recognition model using PyTorch.'
-                        />
+                    />
                     {/* <Project 
                         title='Film Forum'
                         git='https://github.com/aarteaga53/film-forum'
@@ -50,6 +51,13 @@ const Projects = () => {
                         web='http://cs480-projects.github.io/teams-fall2022/Saber/index.html'
                         text='Team members that I worked with on Budget Buddy.'
                     /> */}
+                    <Project 
+                        image={pss}
+                        title='Personal Scheduling Service'
+                        git='https://github.com/aarteaga53/PSS'
+                        web='https://drive.google.com/file/d/1mV-pTcLFmogqo2GmOb0n3g1QJFoxiygt/view?usp=sharing'
+                        text='Java program to schedule tasks on a given day for a set time.'
+                    />
                 </div>
             </div>
         </div>
