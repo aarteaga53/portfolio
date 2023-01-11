@@ -1,10 +1,12 @@
 import React from 'react'
+import headshot from '../images/placeholder.png'
 
 const About = () => {
     return (
         <div id='about'>
             <div className='page-body' >
                 <div className='section-title'>About</div>
+                <img className='profile-img' src={headshot} alt='profile' />
                 <div className='about-sub'>Software Engineer</div>
                 <div className='about-text'>
                     I am a recent computer science graduate, looking forward to working in a new 

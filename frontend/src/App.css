@@ -13,6 +13,27 @@ body {
   user-select: text;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: var(--gray);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
 .top-panel {
   position: fixed;
   top: 0;
@@ -149,6 +170,14 @@ body {
   font-size: 18px;
   text-align: justify;
   text-justify: auto;
+}
+
+.profile-img {
+  width: 20%;
+  border: 2px solid var(--red);
+  border-radius: 16px;
+  object-fit: cover;
+  margin-bottom: 25px;
 }
 
 .contact-body {
