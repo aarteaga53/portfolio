@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import DeleteIcon from '@mui/icons-material/Delete';
 
-const Admin = () => {
+const Admin = ({jwt, updateJWT}) => {
     let [messages, setMessages] = useState([])
     let navigate = useNavigate()
 
@@ -11,13 +11,15 @@ const Admin = () => {
          * get all messages sent from database
          */
         let getMessages = async () => {
-            let response = await fetch(`http://127.0.0.1:8000/messages`)
-            let data = await response.json()
-            setMessages(data.reverse())
+            if(jwt !== '') {
+                let response = await fetch(`http://127.0.0.1:8000/messages`)
+                let data = await response.json()
+                setMessages(data.reverse())
+            }
         }   
 
         getMessages()
-    }, [])
+    }, [jwt])
 
     /**
      * Gets a date in milliseconds and converts it to the month and day,
@@ -54,10 +56,15 @@ const Admin = () => {
         }
     }
 
+    let logout = () => {
+        updateJWT('')
+        navigate('/')
+    }
+
     return (
         <div>
             <div className='top-panel'>
-                <div className='name' onClick={() => navigate('/')}>Andrew Arteaga</div>
+                <div className='name' onClick={logout}>Andrew Arteaga</div>
             </div>
             <div className='page-body'>
                 <div className='section-title'>Messages</div>

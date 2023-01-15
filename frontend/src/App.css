@@ -2,7 +2,7 @@
   --black: #222222;
   --gray: #444444;
   --red: #D2263C;
-  --pastel-red: #C45349;
+  --brick-red: #C45349;
   --light-gray: #e4e1e1;
 }
 
@@ -173,9 +173,10 @@ body {
 }
 
 .profile-img {
-  width: 20%;
+  height: 30vh;
+  width: 30vh;
   border: 2px solid var(--red);
-  border-radius: 16px;
+  border-radius: 50%;
   object-fit: cover;
   margin-bottom: 25px;
 }

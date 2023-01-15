@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useNavigate } from 'react-router-dom'
 
-const Login = () => {
+const Login = ({jwt}) => {
     let [username, setUsername] = useState('')
     let [password, setPassword] = useState('')
     let navigate = useNavigate()
@@ -11,17 +11,20 @@ const Login = () => {
      */
     let login = async () => {
         if(username !== '' && password !== '') {
-            let response = await fetch(`http://127.0.0.1:8000/adminLogin`, {
+            const user = {username: username, password: password}
+
+            let response = await fetch(`http://127.0.0.1:8000/verify`, {
                 method: "POST",
                 headers: {
                     'Content-type': 'application/json'
                 },
-                body: JSON.stringify({username: username, password: password})
+                body: JSON.stringify(user)
             })
 
             let data = await response.json()
-
-            if(data.msg === 'success') {
+    
+            if(data.msg === 'User valid.') {
+                jwt(data.token)
                 navigate('/admin')
             }
         }

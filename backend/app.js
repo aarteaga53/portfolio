@@ -23,25 +23,6 @@ app.get('/hello', (req, res) => {
   res.json({msg: 'Hello, World!'})
 })
 
-app.post('/adminLogin', (req, res) => {
-  fs.readFile('user.txt', 'utf8', (err, data) => {
-    if (err) {
-      console.error(err);
-      res.json({msg: 'error'})
-      return;
-    }
-    
-    const user = data.substring(0, data.indexOf('\n') - 1)
-    const pass = data.substring(data.indexOf('\n') + 1)
-    
-    if(req.body.username === user && req.body.password === pass) {
-      res.json({msg: 'success'})
-    } else {
-      res.json({msg: 'error'})
-    }
-  });
-})
-
 app.use('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend', 'build', 'index.html'))
 })
