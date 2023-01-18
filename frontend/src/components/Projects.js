@@ -28,7 +28,7 @@ const Projects = () => {
                     />
                     <Project 
                         image={porftolio}
-                        title='Portfolio' 
+                        title="Andrew's Portfolio" 
                         git='https://github.com/aarteaga53/portfolio' 
                         web='https://andrewarteaga.com'
                         text='Web application to showcase my projects.'

@@ -1,14 +1,13 @@
 require('dotenv').config({ path: './config.env' })
 
 const express = require('express')
-var favicon = require('serve-favicon')
+const favicon = require('serve-favicon')
 const path = require('path')
 const cors = require('cors')
 const app = express()
 const port = 8000
 const dbo = require('./db/conn')
 const dbRoutes = require('./routes/record.js')
-const fs = require('fs')
 
 app.use(cors())
 app.use(require('body-parser').json())
