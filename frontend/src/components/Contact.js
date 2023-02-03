@@ -52,10 +52,6 @@ const Contact = () => {
         <div id='contact'>
             <div className='page-body'>
                 <div className='section-title'>Contact</div>
-                <div className='profile-links'>
-                    <a className='profile-link' href='https://github.com/aarteaga53' target='_blank' rel='noopener noreferrer'><i className='fa fa-github'></i> GitHub</a>
-                    <a className='profile-link' href='mailto:andrewarteaga123@gmail.com'><i className='fa fa-at'></i> Email</a>
-                </div>
                 <div className='contact-body'>
                     <input className='contact-input' id='name' type='text' placeholder='Name' onChange={handleChange}></input>
                     <input className='contact-input' id='email' type='text' placeholder='Email' onChange={handleChange}></input>

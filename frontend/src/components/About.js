@@ -15,6 +15,27 @@ const About = () => {
                     am excited to work as part of a team where I can learn from different perspectives 
                     and work on meaningful projects.
                 </div>
+                <div className='skills-col'>
+                    <div className='skills-title'>Skills</div>
+                    <ul className='skills'>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>Dart</li>
+                        <li>JavaScript</li>
+                        <li>HTML/CSS</li>
+                        <li>SQL/NoSQL</li>
+                        <li>Firebase</li>
+                        <li>MongoDB</li>
+                        <li>Django</li>
+                        <li>React.js</li>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>Flutter</li>
+                        <li>PyTorch</li>
+                        <li>AWS</li>
+                    </ul>
+                </div>
             </div>
         </div>
     )

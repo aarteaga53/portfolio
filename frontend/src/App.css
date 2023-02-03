@@ -4,6 +4,7 @@
   --red: #D2263C;
   --brick-red: #C45349;
   --light-gray: #e4e1e1;
+  --purple: #a199ed;
 }
 
 body {
@@ -92,6 +93,15 @@ body {
   z-index: 0;
 }
 
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 5vh;
+  /* padding-bottom: 5vh; */
+}
+
 .section-title {
   font-size: 48px;
   font-weight: bold;
@@ -172,6 +182,28 @@ body {
   text-justify: auto;
 }
 
+.skills-col {
+  margin-top: 25px;
+  width: 30%;
+}
+
+.skills-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.skills {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.skills li {
+  margin-bottom: 10px;
+}
+
 .profile-img {
   height: 30vh;
   width: 30vh;
@@ -202,7 +234,7 @@ body {
 }
 
 .profile-links {
-  margin-bottom: 35px;
+  margin-bottom: 5px;
 }
 
 .profile-link {
@@ -302,15 +334,20 @@ body {
 
   .page-body { top: 10vh; padding-bottom: 10vh; } 
 
+  .footer { top: 10vh; }
+
   .project-card { width: 100%; }
 
   .about-text { width: 90%; }
+
+  .skills-col { width: 90%; }
 
   .contact-body { width: 90%; }
 
   .login-box { width: 90%; }
 
   .msg-card { width: 90%; }
+
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1800px)  {
@@ -318,9 +355,13 @@ body {
 
   .page-body { top: 8vh; padding-bottom: 8vh; }
 
+  .footer { top: 8vh; }
+
   .project-card { width: 25%; }
 
   .about-text { width: 40%; }
+
+  .skills-col { width: 40%;}
 
   .contact-body { width: 40%; }
 

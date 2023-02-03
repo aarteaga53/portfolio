@@ -26,9 +26,6 @@ app.use('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend', 'build', 'index.html'))
 })
 
-const MongoClient = require('mongodb').MongoClient
-const url = process.env.ATLAS_URI
-
 // perform a database connection when the server starts
 dbo.connectToServer(function (err) {
 	if (err) {
@@ -41,6 +38,9 @@ dbo.connectToServer(function (err) {
 	  console.log(`Server is running on: http://localhost:${port}`)
 	})
 })
+
+// const MongoClient = require('mongodb').MongoClient
+// const url = process.env.ATLAS_URI
 
 // Connect to the MongoDB database
 // MongoClient.connect(url, (err, client) => {
