@@ -54,7 +54,7 @@ const Login = ({jwt}) => {
                 <div className='name' onClick={() => navigate('/')}>Andrew Arteaga</div>
             </div>
             <div className="page-body">
-                <div className="login-box">
+                <div className="login-box width">
                     <div className="login-title">Welcome Andrew</div>
                     <div className="login-body">
                         <input className="contact-input" id='username' type='text' placeholder="Username" onChange={handleChange}></input>

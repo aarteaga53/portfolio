@@ -69,7 +69,7 @@ const Admin = ({jwt, updateJWT}) => {
             <div className='page-body'>
                 <div className='section-title'>Messages</div>
                 {messages.map((msg, index) => (
-                    <div className='msg-card' key={index}>
+                    <div className='msg-card width' key={index}>
                         <div className='msg-heading'>
                             <div className='msg-name'>{msg.name}</div>
                             <div className='msg-date'>{formatDate(new Date(msg.date))}</div>

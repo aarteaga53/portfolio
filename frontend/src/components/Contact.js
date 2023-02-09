@@ -52,7 +52,7 @@ const Contact = () => {
         <div id='contact'>
             <div className='page-body'>
                 <div className='section-title'>Contact</div>
-                <div className='contact-body'>
+                <div className='contact-body width'>
                     <input className='contact-input' id='name' type='text' placeholder='Name' onChange={handleChange}></input>
                     <input className='contact-input' id='email' type='text' placeholder='Email' onChange={handleChange}></input>
                     <textarea className='contact-input' id='message' rows='10' placeholder='Message' onChange={handleChange}></textarea>

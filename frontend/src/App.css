@@ -35,6 +35,10 @@ body {
   background: #777;
 }
 
+.width {
+  width: 30%;
+}
+
 .top-panel {
   position: fixed;
   top: 0;
@@ -176,7 +180,6 @@ body {
 }
 
 .about-text {
-  width: 30%;
   font-size: 18px;
   text-align: justify;
   text-justify: auto;
@@ -184,7 +187,6 @@ body {
 
 .skills-col {
   margin-top: 25px;
-  width: 30%;
 }
 
 .skills-title {
@@ -216,7 +218,6 @@ body {
 .contact-body {
   display: flex;
   flex-direction: column;
-  width: 30%;
 }
 
 .contact-input {
@@ -258,7 +259,6 @@ body {
 }
 
 .login-box {
-  width: 20%;
   background-color: var(--black);
   border: 2px solid var(--red);
   border-radius: 4px;
@@ -284,7 +284,6 @@ body {
 }
 
 .msg-card {
-  width: 40%;
   margin-bottom: 25px;
 }
 
@@ -338,16 +337,7 @@ body {
 
   .project-card { width: 100%; }
 
-  .about-text { width: 90%; }
-
-  .skills-col { width: 90%; }
-
-  .contact-body { width: 90%; }
-
-  .login-box { width: 90%; }
-
-  .msg-card { width: 90%; }
-
+  .width { width: 90%; }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1800px)  {
@@ -359,13 +349,5 @@ body {
 
   .project-card { width: 25%; }
 
-  .about-text { width: 40%; }
-
-  .skills-col { width: 40%;}
-
-  .contact-body { width: 40%; }
-
-  .login-box { width: 40%; }
-
-  .msg-card { width: 40%; }
+  .width { width: 40%; }
 }
