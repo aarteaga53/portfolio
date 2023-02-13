@@ -23,10 +23,12 @@ const About = () => {
                         <li>C</li>
                         <li>Dart</li>
                         <li>JavaScript</li>
-                        <li>HTML/CSS</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
                         <li>Git</li>
                         <li>GitHub</li>
-                        <li>SQL/NoSQL</li>
+                        <li>SQL</li>
+                        <li>NoSQL</li>
                         <li>Firebase</li>
                         <li>MongoDB</li>
                         <li>Django</li>

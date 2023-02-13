@@ -231,6 +231,7 @@ body {
 
 .contact-input:focus {
   outline: none;
+  border: 2px solid var(--purple);
 }
 
 .profile-links {
