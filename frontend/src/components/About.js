@@ -18,26 +18,26 @@ const About = () => {
                 <div className='skills-col width'>
                     <div className='skills-title'>Skills</div>
                     <ul className='skills'>
-                        <li>Java</li>
-                        <li>Python</li>
-                        <li>C</li>
-                        <li>Dart</li>
-                        <li>JavaScript</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Git</li>
-                        <li>GitHub</li>
-                        <li>SQL</li>
-                        <li>NoSQL</li>
-                        <li>Firebase</li>
-                        <li>MongoDB</li>
-                        <li>Django</li>
-                        <li>React.js</li>
-                        <li>Node.js</li>
-                        <li>Express.js</li>
-                        <li>Flutter</li>
-                        <li>PyTorch</li>
-                        <li>AWS</li>
+                        <li className='skill'>Java</li>
+                        <li className='skill'>Python</li>
+                        <li className='skill'>C</li>
+                        <li className='skill'>Dart</li>
+                        <li className='skill'>JavaScript</li>
+                        <li className='skill'>HTML</li>
+                        <li className='skill'>CSS</li>
+                        <li className='skill'>Git</li>
+                        <li className='skill'>GitHub</li>
+                        <li className='skill'>SQL</li>
+                        <li className='skill'>NoSQL</li>
+                        <li className='skill'>Firebase</li>
+                        <li className='skill'>MongoDB</li>
+                        <li className='skill'>Django</li>
+                        <li className='skill'>React.js</li>
+                        <li className='skill'>Node.js</li>
+                        <li className='skill'>Express.js</li>
+                        <li className='skill'>Flutter</li>
+                        <li className='skill'>PyTorch</li>
+                        <li className='skill'>AWS</li>
                     </ul>
                 </div>
             </div>

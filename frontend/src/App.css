@@ -79,6 +79,7 @@ body {
   font-weight: bold;
   color: var(--white);
   padding: 10px;
+  transition-duration: 0.3s;
 }
 
 .link:hover {
@@ -119,13 +120,13 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 25px;
-  width: 80%;
+  width: 60%;
 }
 
 .project-card {
   border-radius: 4px;
   border: 2px solid var(--red);
-  width: 14%;
+  width: 19%;
 }
 
 .project-img {
@@ -137,7 +138,6 @@ body {
 .project-body {
   padding: 10px;
   border-top: 2px solid var(--red);
-  /* background-color: var(--gray); */
 }
 
 .project-title {
@@ -178,6 +178,13 @@ body {
   font-weight: bold;
   font-style: italic;
   margin-bottom: 25px;
+  transition: transform 0.5s ease-in;
+}
+
+.about-sub:hover {
+  transform: scale(1.5);
+  font-weight: bold;
+  color: var(--purple);
 }
 
 .about-text {
@@ -187,7 +194,7 @@ body {
 }
 
 .skills-col {
-  margin-top: 25px;
+  margin-top: 50px;
 }
 
 .skills-title {
@@ -197,14 +204,22 @@ body {
 }
 
 .skills {
-  height: 200px;
+  height: 15vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
-.skills li {
-  margin-bottom: 10px;
+.skill {
+  transition: transform 0.5s;
+  padding: 15px 0;
+  z-index: 1;
+}
+
+.skill:hover {
+  transform: scale(1.5);
+  font-weight: bold;
+  color: var(--red);
 }
 
 .profile-img {
@@ -229,6 +244,7 @@ body {
   background-color: var(--black);
   color: var(--white);
   font-size: 18px;
+  transition-duration: 0.3s;
 }
 
 .contact-input:focus {
@@ -338,9 +354,13 @@ body {
 
   .footer { top: 10vh; }
 
+  .projects { width: 80%; }
+
   .project-card { width: 100%; }
 
   .width { width: 90%; }
+
+  .skills { height: 30vh; }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1800px)  {
@@ -350,7 +370,11 @@ body {
 
   .footer { top: 8vh; }
 
+  .projects { width: 80%; }
+
   .project-card { width: 25%; }
 
   .width { width: 40%; }
+
+  .skills { height: 20vh; }
 }
