@@ -1,50 +1,26 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const Contact = () => {
-    let [name, setName] = useState('')
-    let [email, setEmail] = useState('')
-    let [message, setMessage] = useState('')
-
     /**
      * send a message to database
      */
-    let sendMessage = async () => {
-        if(name !== '' && email !== '' && message !== '') {
-            let response = await fetch(`http://127.0.0.1:8000/message/send`, {
-                method: "POST",
-                headers: {
-                    'Content-type': 'application/json'
-                },
-                body: JSON.stringify({name: name, email: email, message: message})
-            })
+    let sendMessage = async (event) => {
+        event.preventDefault()
+        const form = new FormData(event.currentTarget);
+        const user = { name: form.get('name'), email: form.get('email'), message: form.get('message') }
 
-            let data = await response.json()
+        let response = await fetch(`http://127.0.0.1:8000/message/send`, {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
 
-            if(data.msg === 'success') {
-                document.getElementById('name').value = ''
-                document.getElementById('email').value = ''
-                document.getElementById('message').value = ''
-                setName('')
-                setEmail('')
-                setMessage('')
-            }
+        let data = await response.json()
+
+        if(data.msg === 'success') {
             // add alert that lets you know if message was sent
-        }
-    }
-
-    let handleChange = (e) => {
-        switch(e.target.id) {
-            case'name':
-                setName(e.target.value)
-                break
-            case'email':
-                setEmail(e.target.value)
-                break
-            case'message':
-                setMessage(e.target.value)
-                break
-            default:
-                break
         }
     }
 
@@ -52,12 +28,15 @@ const Contact = () => {
         <div id='contact'>
             <div className='page-body'>
                 <div className='section-title'>Contact</div>
-                <div className='contact-body width'>
-                    <input className='contact-input' id='name' type='text' placeholder='Name' onChange={handleChange}></input>
-                    <input className='contact-input' id='email' type='text' placeholder='Email' onChange={handleChange}></input>
-                    <textarea className='contact-input' id='message' rows='10' placeholder='Message' onChange={handleChange}></textarea>
-                </div>
-                <div className='button' onClick={sendMessage}>Send</div>
+                <form className='contact-body width' onSubmit={sendMessage}>
+                    <input className='contact-input' id='name' name='name' type='text' placeholder='Name' required></input>
+                    <input className='contact-input' id='email' name='email' type='text' placeholder='Email' required></input>
+                    <textarea className='contact-input' id='message' name='message' rows='10' placeholder='Message' required></textarea>
+                    <div className='buttons'>
+                        <button className='button' type='reset'>Clear</button>
+                        <button className='button' type='submit'>Send</button>
+                    </div>
+                </form>
             </div>
         </div>
     )

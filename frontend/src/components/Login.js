@@ -1,50 +1,30 @@
-import React, { useState } from "react"
+import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Login = ({jwt}) => {
-    let [username, setUsername] = useState('')
-    let [password, setPassword] = useState('')
     let navigate = useNavigate()
 
     /**
      * login into admin page
      */
-    let login = async () => {
-        if(username !== '' && password !== '') {
-            const user = {username: username, password: password}
+    let login = async (event) => {
+        event.preventDefault()
+        const form = new FormData(event.currentTarget);
+        const user = { username: form.get('username'), password: form.get('password') }
 
-            let response = await fetch(`http://127.0.0.1:8000/verify`, {
-                method: "POST",
-                headers: {
-                    'Content-type': 'application/json'
-                },
-                body: JSON.stringify(user)
-            })
+        let response = await fetch(`http://127.0.0.1:8000/verify`, {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
 
-            let data = await response.json()
-    
-            if(data.msg === 'User valid.') {
-                jwt(data.token)
-                navigate('/admin')
-            }
-        }
-    }
+        let data = await response.json()
 
-    /**
-     * update the variables based on the input box that was changed
-     * 
-     * @param {*} e 
-     */
-    let handleChange = (e) => {
-        switch(e.target.id) {
-            case'username':
-                setUsername(e.target.value)
-                break
-            case'password':
-                setPassword(e.target.value)
-                break
-            default:
-                break
+        if(data.msg === 'User valid.') {
+            jwt(data.token)
+            navigate('/admin')
         }
     }
 
@@ -53,18 +33,18 @@ const Login = ({jwt}) => {
             <div className='top-panel'>
                 <div className='name' onClick={() => navigate('/')}>Andrew Arteaga</div>
             </div>
-            <div className="page-body">
-                <div className="login-box width">
-                    <div className="login-title">Welcome Andrew</div>
-                    <div className="login-body">
-                        <input className="contact-input" id='username' type='text' placeholder="Username" onChange={handleChange}></input>
-                        <input className="contact-input" id='password' type='password' placeholder="Password" onChange={handleChange}></input>
+            <div className='page-body'>
+                <form className='login-box width' onSubmit={login}>
+                    <div className='login-title'>Welcome Andrew</div>
+                    <div className='login-body'>
+                        <input className='contact-input' id='username' name='username' type='text' placeholder='Username'></input>
+                        <input className='contact-input' id='password' name='password' type='password' placeholder='Password'></input>
                     </div>
-                    <div className='login-buttons'>
-                        <div className='button' onClick={() => navigate(-1)}>Back</div>
-                        <div className='button' onClick={login}>Login</div>
+                    <div className='buttons'>
+                        <button className='button' type='button' onClick={() => navigate(-1)}>Back</button>
+                        <button className='button' type='submit'>Login</button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     )
