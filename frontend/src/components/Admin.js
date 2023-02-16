@@ -66,7 +66,7 @@ const Admin = ({jwt, updateJWT}) => {
             <div className='top-panel'>
                 <div className='name' onClick={logout}>Andrew Arteaga</div>
             </div>
-            <div className='page-body'>
+            <div className='other-body'>
                 <div className='section-title'>Messages</div>
                 {messages.map((msg, index) => (
                     <div className='msg-card width' key={index}>

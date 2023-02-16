@@ -57,7 +57,7 @@ const Panel = () => {
     }
     
     return (
-        <div>
+        <>
             <div className='top-panel'>
                 <div className='name' style={{color: color}} onClick={() => navigate('/login')}>Andrew Arteaga</div>
                 <div className='links'>
@@ -81,7 +81,7 @@ const Panel = () => {
             <Projects />
             <About />
             <Contact />
-        </div>
+        </>
     )
 }
 

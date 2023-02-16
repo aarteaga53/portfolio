@@ -20,7 +20,10 @@ const Contact = () => {
         let data = await response.json()
 
         if(data.msg === 'success') {
-            // add alert that lets you know if message was sent
+            document.getElementById('name').value = ''
+            document.getElementById('email').value = ''
+            document.getElementById('message').value = ''
+            alert('Message successfully sent!')
         }
     }
 

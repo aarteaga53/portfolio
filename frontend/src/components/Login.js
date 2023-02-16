@@ -33,10 +33,10 @@ const Login = ({jwt}) => {
             <div className='top-panel'>
                 <div className='name' onClick={() => navigate('/')}>Andrew Arteaga</div>
             </div>
-            <div className='page-body'>
+            <div className='other-body'>
                 <form className='login-box width' onSubmit={login}>
                     <div className='login-title'>Welcome Andrew</div>
-                    <div className='login-body'>
+                    <div className='login-input'>
                         <input className='contact-input' id='username' name='username' type='text' placeholder='Username'></input>
                         <input className='contact-input' id='password' name='password' type='password' placeholder='Password'></input>
                     </div>

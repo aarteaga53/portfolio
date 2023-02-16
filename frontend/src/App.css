@@ -2,7 +2,7 @@
   --black: #222222;
   --white: white;
   --gray: #444444;
-  --red: #D2263C;
+  --red: #d3273e;
   --brick-red: #C45349;
   --light-gray: #e4e1e1;
   --purple: #a199ed;
@@ -10,6 +10,7 @@
 
 body {
   background-color: var(--black);
+  background-image: linear-gradient(to bottom right, rgba(211, 39, 62, 0.1), var(--black) 50%);
   color: var(--white);
   font-family: 'Ubuntu', sans-serif;
   user-select: text;
@@ -93,10 +94,21 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--black);
+  /* background-color: var(--black); */
   color: var(--white);
   padding-top: 50px;
   padding-bottom: 5vh;
+  z-index: 0;
+}
+
+.other-body {
+  top: 5vh;
+  min-height: 84vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
   z-index: 0;
 }
 
@@ -105,7 +117,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  top: 5vh;
+  margin-top: 5vh;
 }
 
 .section-title {
@@ -138,6 +150,7 @@ body {
 .project-body {
   padding: 10px;
   border-top: 2px solid var(--red);
+  background-color: var(--black);
 }
 
 .project-title {
@@ -178,7 +191,7 @@ body {
   font-weight: bold;
   font-style: italic;
   margin-bottom: 25px;
-  transition: transform 0.5s ease-in;
+  transition: transform 0.5s;
 }
 
 .about-sub:hover {
@@ -214,6 +227,7 @@ body {
   transition: transform 0.5s;
   padding: 15px 0;
   z-index: 1;
+  list-style-type: none;
 }
 
 .skill:hover {
@@ -268,6 +282,7 @@ body {
   font-size: 32px;
   font-weight: bold;
   margin-right: 25px;
+  transition: 0.3s;
 }
 
 .profile-link:last-of-type {
@@ -275,17 +290,18 @@ body {
 }
 
 .profile-link:hover {
-  color: var(--red);
+  color: var(--purple);
 }
 
 .profile-link:active {
-  color: var(--black);
+  color: var(--red);
 }
 
 .login-box {
   background-color: var(--black);
   border: 2px solid var(--red);
   border-radius: 4px;
+  width: 20%;
 }
 
 .login-title {
@@ -296,7 +312,7 @@ body {
   margin: 50px 0;
 }
 
-.login-body {
+.login-input {
   display: flex;
   flex-direction: column;
   margin: 0 25px;
@@ -352,7 +368,9 @@ body {
 
   .page-body { top: 10vh; padding-bottom: 10vh; } 
 
-  .footer { top: 10vh; }
+  .other-body { top: 10vh; min-height: 79vh; }
+
+  .footer { margin-top: 10vh; }
 
   .projects { width: 80%; }
 
@@ -360,7 +378,7 @@ body {
 
   .width { width: 90%; }
 
-  .skills { height: 30vh; }
+  .skills { height: 50vh; }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1800px)  {
@@ -368,7 +386,9 @@ body {
 
   .page-body { top: 8vh; padding-bottom: 8vh; }
 
-  .footer { top: 8vh; }
+  .other-body { top: 8vh; min-height: 78vh; }
+
+  .footer { margin-top: 8vh; }
 
   .projects { width: 80%; }
 
@@ -376,5 +396,5 @@ body {
 
   .width { width: 40%; }
 
-  .skills { height: 20vh; }
+  .skills { height: 25vh; }
 }
