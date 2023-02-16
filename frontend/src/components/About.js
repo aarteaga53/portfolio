@@ -5,9 +5,33 @@ const About = () => {
     return (
         <div id='about'>
             <div className='page-body' >
-                <div className='section-title'>About</div>
+                <div className='section-title'>
+                    <div className='letters'>A</div>
+                    <div className='letters'>b</div>
+                    <div className='letters'>o</div>
+                    <div className='letters'>u</div>
+                    <div className='letters'>t</div>
+                </div>
                 {/* <img className='profile-img' src={headshot} alt='profile' /> */}
-                <div className='about-sub'>Software Engineer</div>
+                <div className='about-sub'>
+                    <div className='letters'>S</div>
+                    <div className='letters'>o</div>
+                    <div className='letters'>f</div>
+                    <div className='letters'>t</div>
+                    <div className='letters'>w</div>
+                    <div className='letters'>a</div>
+                    <div className='letters'>r</div>
+                    <div className='letters'>e</div>
+                    <div style={{width: '10px'}}></div>
+                    <div className='letters'>E</div>
+                    <div className='letters'>n</div>
+                    <div className='letters'>g</div>
+                    <div className='letters'>i</div>
+                    <div className='letters'>n</div>
+                    <div className='letters'>e</div>
+                    <div className='letters'>e</div>
+                    <div className='letters'>r</div>
+                </div>
                 <div className='about-text width'>
                     I am a recent computer science graduate, looking forward to working in a new 
                     environment where I can apply my software engineering skills. By working in a new 

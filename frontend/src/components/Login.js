@@ -35,7 +35,22 @@ const Login = ({jwt}) => {
             </div>
             <div className='other-body'>
                 <form className='login-box width' onSubmit={login}>
-                    <div className='login-title'>Welcome Andrew</div>
+                    <div className='login-title'>
+                        <div className='letters'>W</div>
+                        <div className='letters'>e</div>
+                        <div className='letters'>l</div>
+                        <div className='letters'>c</div>
+                        <div className='letters'>o</div>
+                        <div className='letters'>m</div>
+                        <div className='letters'>e</div>
+                        <div style={{width: '10px'}}></div>
+                        <div className='letters'>A</div>
+                        <div className='letters'>n</div>
+                        <div className='letters'>d</div>
+                        <div className='letters'>r</div>
+                        <div className='letters'>e</div>
+                        <div className='letters'>w</div>
+                    </div>
                     <div className='login-input'>
                         <input className='contact-input' id='username' name='username' type='text' placeholder='Username'></input>
                         <input className='contact-input' id='password' name='password' type='password' placeholder='Password'></input>

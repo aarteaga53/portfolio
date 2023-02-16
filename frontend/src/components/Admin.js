@@ -67,7 +67,16 @@ const Admin = ({jwt, updateJWT}) => {
                 <div className='name' onClick={logout}>Andrew Arteaga</div>
             </div>
             <div className='other-body'>
-                <div className='section-title'>Messages</div>
+                <div className='section-title'>
+                    <div className='letters'>M</div>
+                    <div className='letters'>e</div>
+                    <div className='letters'>s</div>
+                    <div className='letters'>s</div>
+                    <div className='letters'>a</div>
+                    <div className='letters'>g</div>
+                    <div className='letters'>e</div>
+                    <div className='letters'>s</div>
+                </div>
                 {messages.map((msg, index) => (
                     <div className='msg-card width' key={index}>
                         <div className='msg-heading'>

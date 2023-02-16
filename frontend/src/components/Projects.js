@@ -10,7 +10,16 @@ const Projects = () => {
     return (
         <div id='projects'>
             <div className='page-body'>
-                <div className='section-title'>Projects</div>
+                <div className='section-title'>
+                    <div className='letters'>P</div>
+                    <div className='letters'>r</div>
+                    <div className='letters'>o</div>
+                    <div className='letters'>j</div>
+                    <div className='letters'>e</div>
+                    <div className='letters'>c</div>
+                    <div className='letters'>t</div>
+                    <div className='letters'>s</div>
+                </div>
                 <div className='projects'>
                     <Project 
                         image={budgetBuddy} 
