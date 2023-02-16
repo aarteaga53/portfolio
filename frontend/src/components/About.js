@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/About.css'
 // import headshot from '../images/placeholder.png'
 
 const About = () => {
@@ -40,7 +41,15 @@ const About = () => {
                     and work on meaningful projects.
                 </div>
                 <div className='skills-col width'>
-                    <div className='skills-title'>Skills</div>
+                    <div className='skills-title'>
+                        <div className='letters'>S</div>
+                        <div className='letters'>k</div>
+                        <div className='letters'>i</div>
+                        <div className='letters'>l</div>
+                        <div className='letters'>l</div>
+                        <div className='letters'>s</div>
+                        {/* Skills */}
+                    </div>
                     <ul className='skills'>
                         <li className='skill'>Java</li>
                         <li className='skill'>Python</li>

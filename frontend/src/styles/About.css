@@ -1,0 +1,66 @@
+.about-sub {
+    font-size: 28px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 25px;
+    transition: transform 0.5s;
+    display: flex;
+}
+  
+.about-text {
+    font-size: 18px;
+    text-align: justify;
+    text-justify: auto;
+    display: flex;
+}
+  
+.skills-col {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+  
+.skills-title {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-self: center;
+}
+  
+.skills {
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+  
+.skill {
+    transition: transform 0.5s;
+    padding: 15px 0;
+    z-index: 1;
+    list-style-type: none;
+}
+  
+.skill:hover {
+    transform: scale(1.5);
+    font-weight: bold;
+    color: var(--red);
+    cursor: pointer;
+}
+  
+.profile-img {
+    height: 30vh;
+    width: 30vh;
+    border: 2px solid var(--red);
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 768px)  {
+    .skills { height: 50vh; }
+}
+  
+@media only screen and (min-width: 769px) and (max-width: 1800px)  {
+    .skills { height: 25vh; }
+}

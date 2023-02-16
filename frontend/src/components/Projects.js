@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/Projects.css'
 import Project from '../components/Project'
 import budgetBuddy from '../images/budgetbuddy.png'
 import myNotes from '../images/list.jpg'

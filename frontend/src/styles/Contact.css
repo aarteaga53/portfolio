@@ -1,0 +1,28 @@
+.contact-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-input {
+    margin-bottom: 15px;
+    border: 2px solid var(--red); 
+    border-radius: 4px;
+    padding: 12px 20px;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 18px;
+    transition-duration: 0.3s;
+}
+
+.contact-input:focus {
+    outline: none;
+    border: 2px solid var(--purple);
+}
+
+@media only screen and (max-width: 768px)  {
+    .skills { height: 50vh; }
+}
+  
+@media only screen and (min-width: 769px) and (max-width: 1800px)  {
+    .skills { height: 25vh; }
+}

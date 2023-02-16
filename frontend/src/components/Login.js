@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import '../styles/Login.css'
 
 const Login = ({jwt}) => {
     let navigate = useNavigate()
@@ -51,9 +52,9 @@ const Login = ({jwt}) => {
                         <div className='letters'>e</div>
                         <div className='letters'>w</div>
                     </div>
-                    <div className='login-input'>
-                        <input className='contact-input' id='username' name='username' type='text' placeholder='Username'></input>
-                        <input className='contact-input' id='password' name='password' type='password' placeholder='Password'></input>
+                    <div className='login-inputs'>
+                        <input className='login-input' id='username' name='username' type='text' placeholder='Username'></input>
+                        <input className='login-input' id='password' name='password' type='password' placeholder='Password'></input>
                     </div>
                     <div className='buttons'>
                         <button className='button' type='button' onClick={() => navigate(-1)}>Back</button>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import DeleteIcon from '@mui/icons-material/Delete'
+import '../styles/Admin.css'
 
 const Admin = ({jwt, updateJWT}) => {
     let [messages, setMessages] = useState([])

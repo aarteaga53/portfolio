@@ -100,15 +100,12 @@ body {
   color: white;
 }
 
-
-
 .page-body {
   top: 5vh;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: var(--black); */
   color: var(--white);
   padding-top: 50px;
   padding-bottom: 5vh;
@@ -148,45 +145,9 @@ body {
 }
 
 .letters:hover {
+  cursor: pointer;
   color: var(--purple);
   transform: scale(1.5);
-}
-
-.projects {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
-  width: 60%;
-}
-
-.project-card {
-  border-radius: 4px;
-  border: 2px solid var(--red);
-  width: 19%;
-  box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
-}
-
-.project-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.project-body {
-  padding: 10px;
-  border-top: 2px solid var(--red);
-  background-color: var(--black);
-}
-
-.project-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.project-buttons {
-  margin-top: 15px;
 }
 
 .button {
@@ -210,81 +171,6 @@ body {
   color: var(--black);
   background-color: var(--red);
   cursor: pointer;
-}
-
-.about-sub {
-  font-size: 28px;
-  font-weight: bold;
-  font-style: italic;
-  margin-bottom: 25px;
-  transition: transform 0.5s;
-  display: flex;
-}
-
-.about-text {
-  font-size: 18px;
-  text-align: justify;
-  text-justify: auto;
-}
-
-.skills-col {
-  margin-top: 50px;
-}
-
-.skills-title {
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.skills {
-  height: 15vh;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.skill {
-  transition: transform 0.5s;
-  padding: 15px 0;
-  z-index: 1;
-  list-style-type: none;
-}
-
-.skill:hover {
-  transform: scale(1.5);
-  font-weight: bold;
-  color: var(--red);
-}
-
-.profile-img {
-  height: 30vh;
-  width: 30vh;
-  border: 2px solid var(--red);
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 50px;
-}
-
-.contact-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-input {
-  margin-bottom: 15px;
-  border: 2px solid var(--red); 
-  border-radius: 4px;
-  padding: 12px 20px;
-  background-color: var(--black);
-  color: var(--white);
-  font-size: 18px;
-  transition-duration: 0.3s;
-}
-
-.contact-input:focus {
-  outline: none;
-  border: 2px solid var(--purple);
 }
 
 .buttons {
@@ -318,79 +204,6 @@ body {
   color: var(--red);
 }
 
-.login-box {
-  background-color: var(--black);
-  border: 2px solid var(--red);
-  border-radius: 4px;
-  width: 20%;
-  box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.login-title {
-  font-size: 32px;
-  font-weight: bold;
-  color: var(--white);
-  /* text-align: center; */
-  margin: 50px 0;
-  display: flex;
-}
-
-.login-input {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: 0 25px;
-}
-
-.msg-card {
-  margin-bottom: 25px;
-  box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
-  background-color: var(--black);
-  border: 2px solid var(--red);
-  border-radius: 4px;
-}
-
-.msg-heading {
-  display: flex;
-  align-items: flex-end;
-  padding: 25px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--red);
-}
-
-.msg-name {
-  font-size: 24px;
-}
-
-.msg-date {
-  margin-left: auto;
-  margin-right: 0;
-}
-
-.msg-email {
-  padding: 25px 10px 10px 10px;
-  margin: 0 25px;
-  border-bottom: 2px solid var(--red);
-}
-
-.msg-body {
-  margin: 0 25px;
-  padding: 10px 10px 25px 10px;
-}
-
-.icon {
-  position: relative;
-  margin-left: 15px;
-  bottom: -4px;
-}
-
-.icon:hover {
-  cursor: pointer;
-}
-
 @media only screen and (max-width: 768px)  {
   .top-panel { height: 10vh; }
 
@@ -404,13 +217,7 @@ body {
 
   .footer { margin-top: 10vh; }
 
-  .projects { width: 80%; }
-
-  .project-card { width: 100%; }
-
   .width { width: 90%; }
-
-  .skills { height: 50vh; }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1800px)  {
@@ -422,11 +229,5 @@ body {
 
   .footer { margin-top: 8vh; }
 
-  .projects { width: 80%; }
-
-  .project-card { width: 25%; }
-
   .width { width: 40%; }
-
-  .skills { height: 25vh; }
 }
