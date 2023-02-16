@@ -56,6 +56,7 @@ body {
 
 .name {
   position: relative;
+  display: block;
   font-size: 24px;
   font-weight: bold;
   color: var(--white);
@@ -68,7 +69,7 @@ body {
 
 .links {
   position: relative;
-  display: flex;
+  display: block;
   margin-left: auto;
   margin-right: 25px;
 }
@@ -87,6 +88,19 @@ body {
   border-radius: 4px;
   cursor: pointer;
 }
+
+.nav-icon {
+  position: relative;
+  display: none;
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+.nav-icon #mui-icon {
+  color: white;
+}
+
+
 
 .page-body {
   top: 5vh;
@@ -365,6 +379,10 @@ body {
 
 @media only screen and (max-width: 768px)  {
   .top-panel { height: 10vh; }
+
+  .links { display: none; }
+
+  .nav-icon { display: block; }
 
   .page-body { top: 10vh; padding-bottom: 10vh; } 
 
