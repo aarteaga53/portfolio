@@ -35,6 +35,15 @@ const Login = ({jwt}) => {
                 <div className='name' onClick={() => navigate('/')}>Andrew Arteaga</div>
             </div>
             <div className='other-body'>
+                <div className='section-title'>
+                    <div className='letters'>S</div>
+                    <div className='letters'>i</div>
+                    <div className='letters'>g</div>
+                    <div className='letters'>n</div>
+                    <div style={{width: '10px'}}></div>
+                    <div className='letters'>I</div>
+                    <div className='letters'>n</div>
+                </div>
                 <form className='login-box width' onSubmit={login}>
                     <div className='login-title'>
                         <div className='letters'>W</div>
