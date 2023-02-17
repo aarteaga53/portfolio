@@ -186,8 +186,6 @@ body {
 .profile-link {
   text-decoration: none;
   color: var(--white);
-  font-size: 32px;
-  font-weight: bold;
   margin-right: 25px;
   transition: 0.3s;
 }
