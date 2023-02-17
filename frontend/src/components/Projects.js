@@ -6,6 +6,7 @@ import myNotes from '../images/list.jpg'
 import porftolio from '../images/portfolio.png'
 import machine from '../images/machine.png'
 import pss from '../images/pss.png'
+import freenos from '../images/freenos.jpg'
 
 const Projects = () => {
     return (
@@ -67,6 +68,13 @@ const Projects = () => {
                         git='https://github.com/aarteaga53/PSS'
                         web='https://drive.google.com/file/d/1mV-pTcLFmogqo2GmOb0n3g1QJFoxiygt/view?usp=sharing'
                         text='Java program to schedule tasks on a given day for a set time.'
+                    />
+                    <Project
+                        image={freenos}
+                        title='FreeNOS'
+                        git='https://github.com/CS4310-Group-BrOs/FreeNOS'
+                        web='https://www.youtube.com/watch?v=dJWRucVLNSA'
+                        text='OS used to learn concepts by implementing Linux-like commands.'
                     />
                 </div>
             </div>
