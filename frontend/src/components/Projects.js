@@ -56,12 +56,6 @@ const Projects = () => {
                         git='https://github.com/aarteaga53/film-forum'
                         text='In progress...'
                     /> */}
-                    {/* <Project 
-                        title='Team Website' 
-                        git='https://github.com/Group-Saber/team_site' 
-                        web='http://cs480-projects.github.io/teams-fall2022/Saber/index.html'
-                        text='Team members that I worked with on Budget Buddy.'
-                    /> */}
                     <Project 
                         image={pss}
                         title='Personal Scheduling Service'

@@ -1,10 +1,10 @@
 import './App.css'
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Panel from './components/Panel'
 import Login from './components/Login'
 import Admin from './components/Admin'
 import Footer from './components/Footer'
+import Navbar from './components/Navbar'
 
 function App() {
   let [jwt, setJWT] = useState('')
@@ -37,7 +37,7 @@ function App() {
     <Router>
       <div>
         <Routes>
-          <Route path='/' element={<Panel />}></Route>
+          <Route path='/' element={<Navbar />}></Route>
           <Route path='/login' element={<Login jwt={updateJWT} />}></Route>
           <Route path='/admin' element={<Admin jwt={jwt} updateJWT={updateJWT} />}></Route>
         </Routes>

@@ -6,7 +6,7 @@ import Contact from './Contact'
 import CloseIcon from '@mui/icons-material/Close'
 import MenuIcon from '@mui/icons-material/Menu'
 
-const Panel = () => {
+const Navbar = () => {
     let [color, setColor] = useState('#FFFFFF')
     let [contrast, setContrast] = useState('#000000')
     let [index, setIndex] = useState(0)
@@ -106,4 +106,4 @@ const Panel = () => {
     )
 }
 
-export default Panel
+export default Navbar

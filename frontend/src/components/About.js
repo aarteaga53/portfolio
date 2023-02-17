@@ -34,11 +34,13 @@ const About = () => {
                     <div className='letters'>r</div>
                 </div>
                 <div className='about-text width'>
-                    I am a recent computer science graduate, looking forward to working in a new 
-                    environment where I can apply my software engineering skills. By working in a new 
-                    environment, I am hoping to gain new skills that can make me a better programmer. I 
-                    am excited to work as part of a team where I can learn from different perspectives 
-                    and work on meaningful projects.
+                    I am a recent Computer Science graduate and an aspiring software engineer. I am 
+                    eager to break into the world of technology, where I can apply my skills and 
+                    make an impact, no matter how small it may be. Throughout my journey, I hope 
+                    to meet and work with people that share a similar enthusiasm, and we can learn 
+                    from each other to become better programmers. I am fascinated by what the future 
+                    of technology has to offer, and the possibility of being a part of it, gives me 
+                    much excitement.
                 </div>
                 <div className='skills-col width'>
                     <div className='skills-title'>
@@ -48,7 +50,6 @@ const About = () => {
                         <div className='letters'>l</div>
                         <div className='letters'>l</div>
                         <div className='letters'>s</div>
-                        {/* Skills */}
                     </div>
                     <ul className='skills'>
                         <li className='skill'>Java</li>
