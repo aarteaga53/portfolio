@@ -7,6 +7,7 @@ import porftolio from '../images/portfolio.png'
 import machine from '../images/machine.png'
 import pss from '../images/pss.png'
 import freenos from '../images/freenos.jpg'
+import Terminal from './Terminal'
 
 const Projects = () => {
     return (
@@ -71,6 +72,7 @@ const Projects = () => {
                         text='OS used to learn concepts by implementing Linux-like commands.'
                     />
                 </div>
+                <Terminal />
             </div>
         </div>
     )

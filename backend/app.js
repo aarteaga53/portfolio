@@ -8,6 +8,7 @@ const app = express()
 const port = 8000
 const dbo = require('./db/conn')
 const dbRoutes = require('./routes/record.js')
+const fs = require('fs')
 
 app.use(cors())
 app.use(require('body-parser').json())
@@ -20,6 +21,84 @@ app.use(favicon(path.join(__dirname, '../frontend', 'build', 'favicon.ico')))
 
 app.get('/hello', (req, res) => {
   res.json({msg: 'Hello, World!'})
+})
+
+app.post('/directory', (req, res) => {
+	fs.stat(`root/${req.body.path}`, (err, stats) => {
+		if(err) {
+			console.log(err)
+			res.json({ msg: 'error' })
+			return
+		}
+
+		if(stats.isDirectory()) {
+			res.json({ msg: 'success' })
+			return
+		}
+	})
+})
+
+app.post('/cat', (req, res) => {
+	fs.stat(`root/${req.body.path}`, (err, stats) => {
+		if(err) {
+			console.log(err)
+			res.json({ msg: 'error' })
+			return
+		}
+
+		if(stats.isFile()) {
+			fs.readFile(`root/${req.body.path}`, 'utf8', (err, data) => {
+				if(err) {
+				  console.error(err);
+				  res.json({ msg: 'error' })
+				  return
+				}
+		
+				res.json({ msg: data })
+			})
+		}
+	})
+	// fs.access(`root/${req.body.path}`, (err) => {
+	// 	if(err) {
+	// 		console.log(err)
+	// 		res.json({ msg: 'error' })
+	// 		return
+	// 	}
+
+	// 	fs.readFile(`root/${req.body.path}`, 'utf8', (err, data) => {
+	// 		if(err) {
+	// 		  console.error(err);
+	// 		  res.json({ msg: 'error' })
+	// 		  return
+	// 		}
+	
+	// 		res.json(data)
+	// 	})
+	// })
+})
+
+app.post('/list', (req, res) => {
+	fs.readdir(`root/${req.body.path}`, (err, files) => {
+		if(err) {
+			console.log(err)
+			res.json({ msg: 'error' })
+			return
+		}
+
+		res.json(files)
+	})
+})
+
+app.get('/root', (req, res) => {
+	fs.readFile('root/java/CaesarCipher.java', 'utf8', (err, data) => {
+        if(err) {
+          console.error(err);
+          res.json({msg: 'error'})
+          return
+        }
+
+		res.json(data)
+    })
 })
 
 app.use('/*', (req, res) => {
@@ -38,27 +117,3 @@ dbo.connectToServer(function (err) {
 	  console.log(`Server is running on: http://localhost:${port}`)
 	})
 })
-
-// const MongoClient = require('mongodb').MongoClient
-// const url = process.env.ATLAS_URI
-
-// Connect to the MongoDB database
-// MongoClient.connect(url, (err, client) => {
-//   if (err) {
-//     console.error(err);
-//     return;
-//   }
-
-//   // Connected successfully
-//   console.log('Connected to MongoDB database');
-
-//   // Get a reference to the todos collection
-//   const todos = client.db('portfolio').collection('contacts');
-
-//   // Disconnect from the MongoDB database when the app closes
-//   app.on('close', () => client.close());
-// });
-
-// app.listen(port, () => {
-//     console.log(`Example app listening at http://localhost:${port}`)
-// })

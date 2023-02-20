@@ -86,7 +86,7 @@ const Admin = ({jwt, updateJWT}) => {
                             <div className='icon' onClick={() => deleteMessage(index)}><DeleteIcon /></div>
                         </div>
                         <div className='msg-email'>{msg.email}</div>
-                        <div className='msg-body'>{msg.message}</div>
+                        <pre className='msg-body'>{msg.message}</pre>
                     </div>
                 ))}
             </div>
