@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../styles/Login.css'
+import Title from './Title'
 
 const Login = ({jwt}) => {
     let navigate = useNavigate()
@@ -35,32 +36,9 @@ const Login = ({jwt}) => {
                 <div className='name' onClick={() => navigate('/')}>Andrew Arteaga</div>
             </div>
             <div className='other-body'>
-                <div className='section-title'>
-                    <div className='letters'>S</div>
-                    <div className='letters'>i</div>
-                    <div className='letters'>g</div>
-                    <div className='letters'>n</div>
-                    <div style={{width: '10px'}}></div>
-                    <div className='letters'>I</div>
-                    <div className='letters'>n</div>
-                </div>
+                <Title title='Sign In' section='section-title' />
                 <form className='login-box width' onSubmit={login}>
-                    <div className='login-title'>
-                        <div className='letters'>W</div>
-                        <div className='letters'>e</div>
-                        <div className='letters'>l</div>
-                        <div className='letters'>c</div>
-                        <div className='letters'>o</div>
-                        <div className='letters'>m</div>
-                        <div className='letters'>e</div>
-                        <div style={{width: '10px'}}></div>
-                        <div className='letters'>A</div>
-                        <div className='letters'>n</div>
-                        <div className='letters'>d</div>
-                        <div className='letters'>r</div>
-                        <div className='letters'>e</div>
-                        <div className='letters'>w</div>
-                    </div>
+                    <Title title='Welcome Andrew' section='login-title' />
                     <div className='login-inputs'>
                         <input className='login-input' id='username' name='username' type='text' placeholder='Username'></input>
                         <input className='login-input' id='password' name='password' type='password' placeholder='Password'></input>

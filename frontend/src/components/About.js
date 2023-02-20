@@ -1,56 +1,63 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import '../styles/About.css'
+import Title from './Title'
+import Typewriter from 'typewriter-effect'
 // import headshot from '../images/placeholder.png'
 
 const About = () => {
+    let textRef = useRef()
+    let [isScrolledTo, setIsScrolledTo] = useState(false)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries, observer) => {
+            const entry = entries[0];
+            console.log('entry.isIntersecting', entry.isIntersecting)
+            const element = document.getElementById('about-text')
+            console.log(element)
+
+            if(entry.isIntersecting) {
+                setIsScrolledTo(true)
+            }
+        })
+
+        observer.observe(textRef.current)
+    }, [])
+
     return (
         <div id='about'>
             <div className='page-body' >
-                <div className='section-title'>
-                    <div className='letters'>A</div>
-                    <div className='letters'>b</div>
-                    <div className='letters'>o</div>
-                    <div className='letters'>u</div>
-                    <div className='letters'>t</div>
-                </div>
+                <Title title='About' section='section-title' />
                 {/* <img className='profile-img' src={headshot} alt='profile' /> */}
-                <div className='about-sub'>
-                    <div className='letters'>S</div>
-                    <div className='letters'>o</div>
-                    <div className='letters'>f</div>
-                    <div className='letters'>t</div>
-                    <div className='letters'>w</div>
-                    <div className='letters'>a</div>
-                    <div className='letters'>r</div>
-                    <div className='letters'>e</div>
-                    <div style={{width: '10px'}}></div>
-                    <div className='letters'>E</div>
-                    <div className='letters'>n</div>
-                    <div className='letters'>g</div>
-                    <div className='letters'>i</div>
-                    <div className='letters'>n</div>
-                    <div className='letters'>e</div>
-                    <div className='letters'>e</div>
-                    <div className='letters'>r</div>
-                </div>
-                <div className='about-text width'>
-                    I am a recent Computer Science graduate and an aspiring software engineer. I am 
+                <Title title='Software Engineer' section='about-sub' />
+                <div className='about-text width' id='about-text' ref={textRef}>
+                    {/* I am a recent Computer Science graduate and an aspiring software engineer. I am 
                     eager to break into the world of technology, where I can apply my skills and 
                     make an impact, no matter how small it may be. Throughout my journey, I hope 
                     to meet and work with people that share a similar enthusiasm, and we can learn 
                     from each other to become better programmers. I am fascinated by what the future 
                     of technology has to offer, and the possibility of being a part of it, gives me 
-                    much excitement.
+                    much excitement. */}       
+                    {isScrolledTo ? (
+                        <Typewriter 
+                            onInit={(typewriter) => {
+                                typewriter.typeString("I am a recent Computer Science graduate and an aspiring software engineer. I am " +
+                                "eager to break into the world of technology, where I can apply my skills and " +
+                                "make an impact, no matter how small it may be. Throughout my journey, I hope " +
+                                "to meet and work with people that share a similar enthusiasm, and we can learn " +
+                                "from each other to become better programmers. I am fascinated by what the future " +
+                                "of technology has to offer, and the possibility of being a part of it, gives me " +
+                                "much excitement.")
+                                .changeDelay(1)
+                                .start()
+                            }}
+                            options={{
+                                delay: 25,
+                            }}
+                        />
+                    ) : null}                 
                 </div>
                 <div className='skills-col width'>
-                    <div className='skills-title'>
-                        <div className='letters'>S</div>
-                        <div className='letters'>k</div>
-                        <div className='letters'>i</div>
-                        <div className='letters'>l</div>
-                        <div className='letters'>l</div>
-                        <div className='letters'>s</div>
-                    </div>
+                    <Title title='Skills' section='skills-title' />
                     <ul className='skills'>
                         <li className='skill'>Java</li>
                         <li className='skill'>Python</li>

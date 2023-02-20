@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import DeleteIcon from '@mui/icons-material/Delete'
 import '../styles/Admin.css'
+import Title from './Title'
 
 const Admin = ({jwt, updateJWT}) => {
     let [messages, setMessages] = useState([])
@@ -68,16 +69,7 @@ const Admin = ({jwt, updateJWT}) => {
                 <div className='name' onClick={logout}>Andrew Arteaga</div>
             </div>
             <div className='other-body'>
-                <div className='section-title'>
-                    <div className='letters'>M</div>
-                    <div className='letters'>e</div>
-                    <div className='letters'>s</div>
-                    <div className='letters'>s</div>
-                    <div className='letters'>a</div>
-                    <div className='letters'>g</div>
-                    <div className='letters'>e</div>
-                    <div className='letters'>s</div>
-                </div>
+                <Title title='Messages' section='section-title' />
                 {messages.map((msg, index) => (
                     <div className='msg-card width' key={index}>
                         <div className='msg-heading'>

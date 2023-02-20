@@ -12,11 +12,11 @@ const Terminal = () => {
     { msg: "Enter 'help' for a list of commands.", class: 'welcome'}
   ])
   const help = [
-    { msg: '  cat     -   concatenate file and print', class: 'welcome' },
-    { msg: '  cd      -   change working directory', class: 'welcome' },
-    { msg: '  clear   -   clear terminal screen', class: 'welcome' },
-    { msg: '  help    -   view list of commands', class: 'welcome' },
-    { msg: '  ls      -   list directory contents', class: 'welcome' }
+    { msg: '\tcat\t\t-\tconcatenate file and print', class: 'welcome' },
+    { msg: '\tcd\t\t-\tchange working directory', class: 'welcome' },
+    { msg: '\tclear\t-\tclear terminal screen', class: 'welcome' },
+    { msg: '\thelp\t-\tview list of commands', class: 'welcome' },
+    { msg: '\tls\t\t-\tlist directory contents', class: 'welcome' }
   ]
 
   useEffect(() => {

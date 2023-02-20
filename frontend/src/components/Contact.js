@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/Contact.css'
+import Title from './Title'
 
 const Contact = () => {
     /**
@@ -31,15 +32,7 @@ const Contact = () => {
     return (
         <div id='contact'>
             <div className='page-body'>
-                <div className='section-title'>
-                    <div className='letters'>C</div>
-                    <div className='letters'>o</div>
-                    <div className='letters'>n</div>
-                    <div className='letters'>t</div>
-                    <div className='letters'>a</div>
-                    <div className='letters'>c</div>
-                    <div className='letters'>t</div>
-                </div>
+                <Title title='Contact' section='section-title' />
                 <form className='contact-body width' onSubmit={sendMessage}>
                     <input className='contact-input' id='name' name='name' type='text' placeholder='Name' required></input>
                     <input className='contact-input' id='email' name='email' type='text' placeholder='Email' required></input>
