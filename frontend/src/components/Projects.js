@@ -11,63 +11,64 @@ import Terminal from './Terminal'
 import Title from './Title'
 
 const Projects = () => {
-    return (
-        <div id='projects'>
-            <div className='page-body'>
-                <Title title='Projects' section='section-title' />
-                <div className='projects'>
-                    <Project 
-                        image={budgetBuddy} 
-                        title='Budget Buddy' 
-                        git='https://github.com/Group-Saber/saber-budget-buddy' 
-                        web='https://saber.andrewarteaga.com'
-                        text='Web applicaton to keep track of your budget and debt.' 
-                    />
-                    <Project 
-                        image={myNotes} 
-                        title='My Notes' 
-                        git='https://github.com/aarteaga53/my-notes' 
-                        web='https://play.google.com/store/apps/details?id=com.arteagaapp.mynotes&pli=1' 
-                        text='Mobile application to store and organize school notes.'
-                    />
-                    <Project 
-                        image={porftolio}
-                        title="Andrew's Portfolio" 
-                        git='https://github.com/aarteaga53/portfolio' 
-                        web='https://andrewarteaga.com'
-                        text='Web application to showcase my projects.'
-                    />
-                    <Project 
-                        image={machine}
-                        title='Machine Learning' 
-                        git='https://github.com/aarteaga53/facial_expression_recognition'
-                        web='https://www.kaggle.com/competitions/cs4210-summer2022-assignment-2/leaderboard'
-                        text='Facial expression recognition model using PyTorch.'
-                    />
-                    {/* <Project 
-                        title='Film Forum'
-                        git='https://github.com/aarteaga53/film-forum'
-                        text='In progress...'
-                    /> */}
-                    <Project 
-                        image={pss}
-                        title='Personal Scheduling Service'
-                        git='https://github.com/aarteaga53/PSS'
-                        web='https://drive.google.com/file/d/1mV-pTcLFmogqo2GmOb0n3g1QJFoxiygt/view?usp=sharing'
-                        text='Java program to schedule tasks on a given day for a set time.'
-                    />
-                    <Project
-                        image={freenos}
-                        title='FreeNOS'
-                        git='https://github.com/CS4310-Group-BrOs/FreeNOS'
-                        web='https://www.youtube.com/watch?v=dJWRucVLNSA'
-                        text='OS used to learn concepts by implementing Linux-like commands.'
-                    />
-                </div>
-                <Terminal />
-            </div>
+  const projects = [
+    {
+      image: budgetBuddy, 
+      title: 'Budget Buddy',
+      git: 'https://github.com/Group-Saber/saber-budget-buddy',
+      web: 'https://saber.andrewarteaga.com',
+      text: 'Web applicaton to keep track of your budget and debt.'
+    }, 
+    {
+      image: myNotes,
+      title: 'My Notes',
+      git: 'https://github.com/aarteaga53/my-notes',
+      web: 'https://play.google.com/store/apps/details?id=com.arteagaapp.mynotes&pli=1',
+      text: 'Mobile application to store and organize school notes.'
+    },
+    {
+      image: porftolio,
+      title: "Andrew's Portfolio",
+      git: 'https://github.com/aarteaga53/portfolio',
+      web: 'https://andrewarteaga.com',
+      text: 'Web application to showcase my projects.'
+    },
+    {
+      image: machine,
+      title: 'Machine Learning',
+      git: 'https://github.com/aarteaga53/facial_expression_recognition',
+      web: 'https://www.kaggle.com/competitions/cs4210-summer2022-assignment-2/leaderboard',
+      text: 'Facial expression recognition model using PyTorch.'
+    },
+    {
+      image: pss,
+      title: 'Personal Scheduling Service',
+      git: 'https://github.com/aarteaga53/PSS',
+      web: 'https://drive.google.com/file/d/1mV-pTcLFmogqo2GmOb0n3g1QJFoxiygt/view?usp=sharing',
+      text: 'Java program to schedule tasks on a given day for a set time.'
+    },
+    {
+      image: freenos,
+      title: 'FreeNOS',
+      git: 'https://github.com/CS4310-Group-BrOs/FreeNOS',
+      web: 'https://www.youtube.com/watch?v=dJWRucVLNSA',
+      text: 'OS used to learn concepts by implementing Linux-like commands.'
+    }
+  ]
+
+  return (
+    <div id='projects'>
+      <div className='page-body'>
+        <Title title='Projects' section='section-title' />
+        <div className='projects'>
+          {projects.map((project, index) => (
+            <Project key={index} project={project} />
+          ))}
         </div>
-    )
+        <Terminal />
+      </div>
+    </div>
+  )
 }
 
 export default Projects
