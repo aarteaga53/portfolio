@@ -59,6 +59,9 @@ const Navbar = () => {
     setIndex(0)
   }
 
+  /**
+   * toggle hides the links when screen is too small
+   */
   let showLinks = () => {
     var name = document.getElementById('name')
     var nav = document.getElementById('links')
@@ -77,7 +80,7 @@ const Navbar = () => {
   return (
     <>
       <div className='top-panel'>
-        <div className='name' id='name' style={{color: color}} onClick={() => navigate('/login')}>Andrew Arteaga</div>
+        <div className='name' id='name' style={{color: color}} onClick={() => navigate('/signin')}>Andrew Arteaga</div>
         <div className='links' id='links'>
           <a className='link' href='#projects' id='1' 
             style={index === 1 ? style : null} 

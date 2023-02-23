@@ -1,4 +1,4 @@
-.login-box {
+.signin-box {
     background-color: var(--black);
     border: 2px solid var(--red);
     border-radius: 4px;
@@ -9,7 +9,7 @@
     align-items: center;
 }
 
-.login-title {
+.signin-title {
     font-size: 32px;
     font-weight: bold;
     color: var(--white);
@@ -17,14 +17,14 @@
     display: flex;
 }
 
-.login-inputs {
+.signin-inputs {
     display: flex;
     flex-direction: column;
     width: 90%;
     margin: 0 25px;
 }
 
-.login-input {
+.signin-input {
     margin-bottom: 15px;
     border: 2px solid var(--red); 
     border-radius: 4px;
@@ -35,7 +35,7 @@
     transition-duration: 0.3s;
 }
 
-.login-input:focus {
+.signin-input:focus {
     outline: none;
     border: 2px solid var(--purple);
 }

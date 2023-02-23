@@ -15,6 +15,10 @@ const About = () => {
   ]
 
   useEffect(() => {
+    /**
+     * check when the screen is scrolled to the
+     *  about me page to begin typewriter effect
+     */
     const observer = new IntersectionObserver((entries, observer) => {
       const entry = entries[0];
 

@@ -1,7 +1,7 @@
 import './App.css'
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Login from './components/Login'
+import Signin from './components/Signin'
 import Admin from './components/Admin'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
@@ -38,7 +38,7 @@ function App() {
       <div>
         <Routes>
           <Route path='/' element={<Navbar />}></Route>
-          <Route path='/login' element={<Login jwt={updateJWT} />}></Route>
+          <Route path='/signin' element={<Signin jwt={updateJWT} />}></Route>
           <Route path='/admin' element={<Admin jwt={jwt} updateJWT={updateJWT} />}></Route>
         </Routes>
         <Footer />

@@ -1,15 +1,15 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import '../styles/Login.css'
+import '../styles/Signin.css'
 import Title from './Title'
 
-const Login = ({jwt}) => {
+const Signin = ({jwt}) => {
     let navigate = useNavigate()
 
     /**
-     * login into admin page
+     * signin to admin page
      */
-    let login = async (event) => {
+    let signin = async (event) => {
         event.preventDefault()
         const form = new FormData(event.currentTarget);
         const user = { username: form.get('username'), password: form.get('password') }
@@ -37,15 +37,15 @@ const Login = ({jwt}) => {
             </div>
             <div className='other-body'>
                 <Title title='Sign In' section='section-title' />
-                <form className='login-box width' onSubmit={login}>
-                    <Title title='Welcome Andrew' section='login-title' />
-                    <div className='login-inputs'>
-                        <input className='login-input' id='username' name='username' type='text' placeholder='Username'></input>
-                        <input className='login-input' id='password' name='password' type='password' placeholder='Password'></input>
+                <form className='signin-box width' onSubmit={signin}>
+                    <Title title='Welcome Andrew' section='signin-title' />
+                    <div className='signin-inputs'>
+                        <input className='signin-input' id='username' name='username' type='text' placeholder='Username'></input>
+                        <input className='signin-input' id='password' name='password' type='password' placeholder='Password'></input>
                     </div>
                     <div className='buttons'>
                         <button className='button' type='button' onClick={() => navigate(-1)}>Back</button>
-                        <button className='button' type='submit'>Login</button>
+                        <button className='button' type='submit'>Sign In</button>
                     </div>
                 </form>
             </div>
@@ -53,4 +53,4 @@ const Login = ({jwt}) => {
     )
 }
 
-export default Login
+export default Signin

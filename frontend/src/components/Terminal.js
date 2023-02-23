@@ -46,6 +46,10 @@ const Terminal = () => {
     // observer.disconnect();
   }, [])
 
+  /**
+   * execute the inputted command
+   * @param {*} e 
+   */
   let enterCommand = async (e) => {   
     if(e.key === 'Enter') {
       setDisplay(display => [...display, { msg: `${path} ${command}`, class: 'command'}])
@@ -94,6 +98,11 @@ const Terminal = () => {
     }
   }
 
+  /**
+   * change the current directory to the specified path
+   * @param {*} split 
+   * @returns 
+   */
   let change = async (split) => {
     if(split.length > 1 && split[1].length > 0) {
       let pathName = path.substring(path.indexOf('~') + 1, path.indexOf('$'))
@@ -122,6 +131,11 @@ const Terminal = () => {
     }
   }
 
+  /**
+   * concatenate the specified file and print it out
+   * @param {*} split 
+   * @returns 
+   */
   let cat = async (split) => {
     if(split.length > 1 && split[1].length > 0) {
       if(split[1].includes('..')) {
@@ -145,6 +159,9 @@ const Terminal = () => {
     }
   }
 
+  /**
+   * list the files in the current directory
+   */
   let list = async () => {
     let response = await fetch(`http://127.0.0.1:8000/list`, {
       method: 'POST',
