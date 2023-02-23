@@ -102,6 +102,7 @@
     font-size: 14px;
     margin: 0 0 3px 0;
     font-family: 'Ubuntu', sans-serif;
+    white-space: pre-wrap;
 }
 
 .terminal-body span {
@@ -126,6 +127,7 @@
 
 .file {
     color: var(--orange);
+    padding-left: 20px;
 }
 
 .pwd {

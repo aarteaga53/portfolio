@@ -205,10 +205,21 @@ body {
   color: var(--red);
 }
 
+@keyframes links {
+  from {
+    margin-left: 500px;
+  }
+  to {
+    margin-left: 25px;
+  }
+}
+
 @media only screen and (max-width: 768px)  {
   .top-panel { height: 10vh; }
 
-  .links { display: none; }
+  .name { transition-duration: 1s; }
+
+  .links { display: none; margin-left: 25px; animation: links; animation-duration: 1s; }
 
   .nav-icon { display: block; }
 

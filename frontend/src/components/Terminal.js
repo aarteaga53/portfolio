@@ -123,9 +123,6 @@ const Terminal = () => {
   }
 
   let cat = async (split) => {
-    // let response = await fetch(`http://127.0.0.1:8000/root`)
-    // let data = await response.json()
-
     if(split.length > 1 && split[1].length > 0) {
       if(split[1].includes('..')) {
         return
@@ -160,7 +157,8 @@ const Terminal = () => {
     let data = await response.json()
 
     if(!('msg' in data)) {
-      let files = '    '
+      let files = ''
+
       data.forEach((file) => {
         files += `${file}    `
       })

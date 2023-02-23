@@ -9,9 +9,9 @@ const About = () => {
   let [isScrolledTo, setIsScrolledTo] = useState(false)
   const skills = [
     'Java', 'Python', 'C', 'Dart', 'JavaScript', 'HTML',
-    'CSS', 'Git', 'GitHub', 'SQL', 'NoSQL', 'Firebase',
-    'MongoDB', 'Django', 'React.js', 'Node.js', 'Express.js',
-    'Flutter', 'PyTorch', 'AWS',
+    'CSS', 'Git', 'GitHub', 'Python Django', 'React.js', 'Node.js', 
+    'Express.js', 'Flutter', 'PyTorch', 'SQL', 'NoSQL', 'Firebase',
+    'MongoDB', 'AWS', 'Linux',
   ]
 
   useEffect(() => {
