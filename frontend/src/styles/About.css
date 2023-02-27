@@ -55,11 +55,3 @@
     object-fit: cover;
     margin-bottom: 50px;
 }
-
-@media only screen and (max-width: 768px)  {
-    .skills { height: 50vh; }
-}
-  
-@media only screen and (min-width: 769px) and (max-width: 1800px)  {
-    .skills { height: 25vh; }
-}

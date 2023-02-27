@@ -79,19 +79,15 @@ const Terminal = () => {
       }
 
       setCommand('')
-      document.getElementById('command').value = ''
     } else if(e.key === 'ArrowUp') {
       if(index >= 0) {
-        document.getElementById('command').value = history[index]
         setCommand(history[index])
         setIndex(index - 1)
       }
     } else if(e.key === 'ArrowDown') {
       if(index === history.length - 1) {
-        document.getElementById('command').value = ''
         setCommand('')
       } else if(index < history.length - 1) {
-        document.getElementById('command').value = history[index+1]
         setCommand(history[index+1])
         setIndex(index + 1)
       }
@@ -199,7 +195,7 @@ const Terminal = () => {
             <span>{path.charAt(path.indexOf(':'))}</span>
             <span className='pwd'>{path.substring(path.indexOf(':') + 1, path.indexOf('$'))}</span>
             <span>{path.substring(path.length - 2)}</span>
-            <input ref={inputRef} type='text' id='command' spellCheck={false} onChange={handleChange} onKeyDown={enterCommand} />
+            <input ref={inputRef} type='text' id='command' spellCheck={false} autoComplete='off' value={command} onChange={handleChange} onKeyDown={enterCommand} />
         </div>
     </div>
   )
