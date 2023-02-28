@@ -13,10 +13,13 @@ const Admin = ({jwt, updateJWT}) => {
          * get all messages sent from database
          */
         let getMessages = async () => {
-            if(jwt !== '') {
-                let response = await fetch(`http://127.0.0.1:8000/messages`)
+            if(jwt) {
+                let response = await fetch(`http://127.0.0.1:8000/messages/${jwt}`)
                 let data = await response.json()
-                setMessages(data.reverse())
+
+                if(!('msg' in data)) {
+                    setMessages(data.reverse())
+                }
             }
         }   
 
@@ -59,7 +62,7 @@ const Admin = ({jwt, updateJWT}) => {
     }
 
     let logout = () => {
-        updateJWT('')
+        updateJWT(null)
         navigate('/')
     }
 

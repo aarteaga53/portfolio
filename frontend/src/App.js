@@ -7,7 +7,7 @@ import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 
 function App() {
-  let [jwt, setJWT] = useState('')
+  let [jwt, setJWT] = useState(null)
 
   useEffect(() => {
     /**
@@ -16,7 +16,7 @@ function App() {
     let getJWT = () => {
       const data = window.localStorage.getItem('jwt');
   
-      if(data !== null) {
+      if(data) {
         setJWT(JSON.parse(data));
       }
     }

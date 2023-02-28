@@ -35,7 +35,7 @@ const Contact = () => {
         <Title title='Contact' section='section-title' />
         <form className='contact-body width' onSubmit={sendMessage}>
           <input className='contact-input' id='name' name='name' type='text' placeholder='Name' required></input>
-          <input className='contact-input' id='email' name='email' type='text' placeholder='Email' required></input>
+          <input className='contact-input' id='email' name='email' type='email' placeholder='Email' required></input>
           <textarea className='contact-input' id='message' name='message' rows='10' placeholder='Message' required></textarea>
           <div className='buttons'>
             <button className='button' type='reset'>Clear</button>

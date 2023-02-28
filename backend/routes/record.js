@@ -34,19 +34,27 @@ recordRoutes.route('/verify').post(async (req, res) => {
   res.status(200).json({ token, user, msg: 'User valid.' })
 })
 
-recordRoutes.route("/messages").get(async function (req, res) {
+recordRoutes.route("/messages/:token").get(async function (req, res) {
     const dbConnect = dbo.getDb()
-  
-    dbConnect
-      .collection("contacts")
-      .find({}).limit(50)
-      .toArray(function (err, result) {
-        if (err) {
-          res.status(400).send("Error fetching messages!")
-        } else {
-          res.json(result)
-        }
-    })
+    const token = req.params.token
+
+    try {
+      jwt.verify(token, process.env.JWT_SECRET)
+
+      dbConnect
+        .collection("contacts")
+        .find({}).limit(50)
+        .toArray(function (err, result) {
+          if (err) {
+            res.json({ msg: 'error' })
+          } else {
+            res.json(result)
+          }
+      })
+    } catch(err) {
+      console.log(err)
+      res.json({ msg: 'error' })
+    }
 })
 
 recordRoutes.route("/message/send").post(function (req, res) {
