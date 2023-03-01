@@ -65,7 +65,9 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/ubuntu/portfolio/frontend
+            cd /home/ubuntu/portfolio
+            git pull
+            cd frontend
             npm install
             npm run build
             cd ../backend
