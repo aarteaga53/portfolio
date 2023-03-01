@@ -33,6 +33,7 @@
     margin: 0 25px;
     padding: 10px 10px 25px 10px;
     font-family: 'Ubuntu', sans-serif;
+    white-space: pre-wrap;
   }
   
   .icon {
