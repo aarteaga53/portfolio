@@ -51,7 +51,7 @@ const Projects = () => {
       image: freenos,
       title: 'FreeNOS',
       git: 'https://github.com/CS4310-Group-BrOs/FreeNOS',
-      web: 'https://www.youtube.com/watch?v=dJWRucVLNSA',
+      web: 'https://www.youtube.com/watch?v=kbUgqW4eEvI',
       text: 'OS used to learn concepts by implementing Linux-like commands.'
     }
   ]
