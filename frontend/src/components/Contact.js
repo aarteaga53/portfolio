@@ -11,7 +11,8 @@ const Contact = () => {
     const form = new FormData(event.currentTarget);
     const user = { name: form.get('name'), email: form.get('email'), message: form.get('message') }
 
-    let response = await fetch(`http://127.0.0.1:8000/message/send`, {
+    let host = process.env.REACT_APP_HOST || 'http://127.0.0.1:8000'
+    let response = await fetch(`${host}/message/send`, {
       method: 'POST',
       headers: {
           'Content-type': 'application/json'

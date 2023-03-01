@@ -110,7 +110,8 @@ const Terminal = () => {
         return
       }
 
-      let response = await fetch(`http://127.0.0.1:8000/directory`, {
+      let host = process.env.REACT_APP_HOST || 'http://127.0.0.1:8000'
+      let response = await fetch(`${host}/directory`, {
         method: 'POST',
         headers: {
             'Content-type': 'application/json'
@@ -139,8 +140,8 @@ const Terminal = () => {
       }
 
       let pathName = `${path.substring(path.indexOf('~') + 1, path.indexOf('$'))}/${split[1]}`
-      
-      let response = await fetch(`http://127.0.0.1:8000/cat`, {
+      let host = process.env.REACT_APP_HOST || 'http://127.0.0.1:8000'
+      let response = await fetch(`${host}/cat`, {
         method: 'POST',
         headers: {
           'Content-type': 'application/json'
@@ -159,7 +160,8 @@ const Terminal = () => {
    * list the files in the current directory
    */
   let list = async () => {
-    let response = await fetch(`http://127.0.0.1:8000/list`, {
+    let host = process.env.REACT_APP_HOST || 'http://127.0.0.1:8000'
+    let response = await fetch(`${host}/list`, {
       method: 'POST',
       headers: {
           'Content-type': 'application/json'

@@ -14,7 +14,8 @@ const Admin = ({jwt, updateJWT}) => {
      */
     let getMessages = async () => {
       if(jwt) {
-        let response = await fetch(`http://127.0.0.1:8000/messages/${jwt}`)
+        let host = process.env.REACT_APP_HOST || 'http://127.0.0.1:8000'
+        let response = await fetch(`${host}/messages/${jwt}`)
         let data = await response.json()
 
         if(!('msg' in data)) {
@@ -49,7 +50,8 @@ const Admin = ({jwt, updateJWT}) => {
    * @param {*} index 
    */
   let deleteMessage = async (index) => {
-    let response = await fetch(`http://127.0.0.1:8000/messages/delete/${messages[index]._id}`, { method: "DELETE" })
+    let host = process.env.REACT_APP_HOST || 'http://127.0.0.1:8000'
+    let response = await fetch(`${host}/messages/delete/${messages[index]._id}`, { method: "DELETE" })
 
     let data = await response.json()
 
