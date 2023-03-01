@@ -15,7 +15,6 @@ const Signin = ({jwt}) => {
         const user = { username: form.get('username'), password: form.get('password') }
 
         let host = process.env.REACT_APP_HOST || 'http://127.0.0.1:8000'
-        console.log(host)
         let response = await fetch(`${host}/verify`, {
             method: 'POST',
             headers: {
