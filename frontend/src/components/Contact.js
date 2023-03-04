@@ -39,8 +39,8 @@ const Contact = () => {
           <input className='contact-input' id='email' name='email' type='email' placeholder='Email' required></input>
           <textarea className='contact-input' id='message' name='message' rows='10' placeholder='Message' required></textarea>
           <div className='buttons'>
-            <button className='button' type='reset'>Clear</button>
-            <button className='button' type='submit'>Send</button>
+            <button className='button contact-btn' type='reset'>Clear</button>
+            <button className='button contact-btn' type='submit'>Send</button>
           </div>
         </form>
       </div>

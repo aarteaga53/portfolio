@@ -38,8 +38,9 @@
     padding: 25px;
     z-index: 1;
     list-style-type: none;
+    text-shadow: 0px 0px 10px var(--purple);
 }
-  
+
 .skill:hover {
     transform: scale(1.5);
     font-weight: bold;
