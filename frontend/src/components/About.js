@@ -8,7 +8,7 @@ const About = () => {
   let textRef = useRef()
   let [isScrolledTo, setIsScrolledTo] = useState(false)
   const skills = [
-    'Java', 'Python', 'C', 'Dart', 'JavaScript', 'HTML',
+    'Java', 'Python', 'C', 'Dart', 'JavaScript', 'TypeScript', 'HTML',
     'CSS', 'Git', 'GitHub', 'Python Django', 'React.js', 'Node.js', 
     'Express.js', 'Flutter', 'PyTorch', 'SQL', 'NoSQL', 'Firebase',
     'MongoDB', 'AWS', 'Linux',

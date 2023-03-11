@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import '../styles/Signin.css'
 import Title from './Title'
 
-const Signin = ({jwt}) => {
+const Signin = ({token}) => {
   let navigate = useNavigate()
 
   /**
@@ -26,7 +26,7 @@ const Signin = ({jwt}) => {
     let data = await response.json()
 
     if(data.msg === 'User valid.') {
-      jwt(data.token)
+      token(data.token)
       navigate('/admin')
     }
   }

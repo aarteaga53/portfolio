@@ -5,7 +5,7 @@ import '../styles/Admin.css'
 import Title from './Title'
 import Chat from './Chat'
 
-const Admin = ({jwt, updateJWT}) => {
+const Admin = ({token, updateToken}) => {
   let [messages, setMessages] = useState([])
   let navigate = useNavigate()
 
@@ -14,9 +14,9 @@ const Admin = ({jwt, updateJWT}) => {
      * get all messages sent from database
      */
     let getMessages = async () => {
-      if(jwt) {
+      if(token) {
         let host = process.env.REACT_APP_HOST || 'http://127.0.0.1:8000'
-        let response = await fetch(`${host}/messages/${jwt}`)
+        let response = await fetch(`${host}/messages/${token}`)
         let data = await response.json()
 
         if(!('msg' in data)) {
@@ -26,7 +26,7 @@ const Admin = ({jwt, updateJWT}) => {
     }   
 
     getMessages()
-  }, [jwt])
+  }, [token])
 
   /**
    * Gets a date in milliseconds and converts it to the month and day,
@@ -65,7 +65,7 @@ const Admin = ({jwt, updateJWT}) => {
   }
 
   let logout = () => {
-    updateJWT(null)
+    updateToken(null)
     navigate('/')
   }
 
