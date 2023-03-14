@@ -37,9 +37,9 @@ const Signin = ({jwt}) => {
         <div className='name' onClick={() => navigate('/')}>Andrew Arteaga</div>
       </div>
       <div className='other-body'>
-        <Title title='Sign In' section='section-title' />
+        <Title title='Welcome Andrew' section='section-title' />
         <form className='signin-box width' onSubmit={signin}>
-          <Title title='Welcome Andrew' section='signin-title' />
+          <Title title='Sign In' section='signin-title' />
           <div className='signin-inputs'>
             <input className='signin-input' id='username' name='username' type='text' placeholder='Username'></input>
             <input className='signin-input' id='password' name='password' type='password' placeholder='Password'></input>
