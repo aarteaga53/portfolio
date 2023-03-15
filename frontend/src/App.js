@@ -5,6 +5,7 @@ import Signin from './components/Signin'
 import Admin from './components/Admin'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import SlideShow from './components/SlideShow'
 
 function App() {
   let [jwt, setJWT] = useState(null)
@@ -40,6 +41,7 @@ function App() {
           <Route path='/' element={<Navbar />}></Route>
           <Route path='/signin' element={<Signin jwt={updateJWT} />}></Route>
           <Route path='/admin' element={<Admin jwt={jwt} updateJWT={updateJWT} />}></Route>
+          <Route path='/slideshow' element={<SlideShow />}></Route>
         </Routes>
         <Footer />
       </div>
