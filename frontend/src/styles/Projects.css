@@ -70,6 +70,7 @@
     height: 100%;
     object-fit: contain;
     border-radius: 20px;
+    border: none;
 }
 
 .slide-icons {

@@ -18,6 +18,7 @@ import p0 from './portfolio/p-p.png'
 import p1 from './portfolio/p-t.png'
 import p2 from './portfolio/p-a.png'
 import p3 from './portfolio/p-s.png'
+import p4 from './portfolio/p-ps.png'
 
 let ProjectImages = {
     budgetBuddy,
@@ -32,7 +33,7 @@ let BudgetBuddySlides = { bb0, bb1, bb2, bb3 }
 
 let MyNotesSlides = { mn0, mn1, mn2, mn3, mn4, mn5 }
 
-let PortfolioSlides = { p0, p1, p2, p3 }
+let PortfolioSlides = { p0, p1, p2, p3, p4 }
 
 let MachineSlides = { machine }
 

@@ -33,7 +33,10 @@ const SlideShow = () => {
         tempSet = PSSSlides
         break
       case 'FreeNOS':
-        tempSet = FreeNOSSlides
+        tempSet = {
+          ...FreeNOSSlides, 
+          ...{v1: 'kbUgqW4eEvI', v2: 'Zh_9kIh7R1k', v3: 'dJWRucVLNSA'}
+        }
         break
       default:
         break
@@ -81,7 +84,16 @@ const SlideShow = () => {
               </IconButton>
             </div>
           </div>
-          {slides.length > 0 ? (<img className='slide' src={slides[index]} alt='project slide' />) : null}
+          {(locate.state.set === 'FreeNOS' && index === 0) || locate.state.set !== 'FreeNOS' ? 
+            (<img className='slide' src={slides[index]} alt='project slide' />) :
+            (<iframe
+              className='slide'
+              src={`https://www.youtube.com/embed/${slides[index]}`}
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+              allowFullScreen
+              title='Embedded youtube'
+            />)
+          }
         </div>
       </div>
       <div className='exit-icon' onClick={back}>
