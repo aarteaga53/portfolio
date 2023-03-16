@@ -228,6 +228,8 @@ body {
 
   .other-body { top: 10vh; min-height: 79vh; }
 
+  .section-title { font-size: 36px; }
+
   .footer { margin-top: 10vh; }
 
   .width { width: 90%; }

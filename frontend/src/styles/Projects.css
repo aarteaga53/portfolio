@@ -190,6 +190,14 @@
     .terminal { display: none;}
 
     .project-card { width: 100%; }
+
+    .slideshow { height: 60vh; width: 80vw; }
+
+    .left-icon { margin-left: 5px; }
+
+    .right-icon { margin-right: 5px; }
+
+    .exit-icon { top: calc(10vh + 5px); right: 5px; }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1800px)  {
@@ -200,6 +208,10 @@
     .project-card { width: 25%; }
 
     .slideshow { height: 70vh; width: 80vw; }
+
+    .left-icon { margin-left: 15px; }
+
+    .right-icon { margin-right: 15px; }
 
     .exit-icon { top: calc(8vh + 25px); right: 25px; }
 
