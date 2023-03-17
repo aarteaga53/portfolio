@@ -56,8 +56,10 @@ const Home = () => {
             ))}
           </div>
           <form className='chat-f' onSubmit={chat}>
-            <input className='chat-ipt' id='sentence' name='sentence' type='text' autoComplete='off' required></input>
-            <button className='chat-i' type='submit'><SendIcon /></button>
+            <div className='chat-send'>
+              <input className='chat-ipt' id='sentence' name='sentence' type='text' autoComplete='off' required></input>
+              <button className='chat-i' type='submit'><SendIcon /></button>
+            </div>
           </form>
         </div>
       </div>

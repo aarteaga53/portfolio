@@ -80,16 +80,16 @@ const Navbar = () => {
       <div className='top-panel'>
         <div className='name' id='name' style={{color: color}} onClick={() => navigate('/signin')}>Andrew Arteaga</div>
         <div className='links' id='links'>
-          <Link className='link' to='/home' id='0'
-            style={index === 0 || locate.pathname === '/home' ? style : null}
-            onMouseEnter={enter} onMouseLeave={leave}
-            onClick={randomColor}
-          >Home</Link>
-          <Link className='link' to='/projects' id='1' 
-            style={index === 1 || locate.pathname === '/projects'  ? style : null} 
+          <Link className='link' to='/projects' id='0' 
+            style={index === 0 || locate.pathname === '/projects'  ? style : null} 
             onMouseEnter={enter} onMouseLeave={leave}
             onClick={randomColor}
           >Projects</Link>
+          <Link className='link' to='/chat' id='1'
+            style={index === 1 || locate.pathname === '/chat' ? style : null}
+            onMouseEnter={enter} onMouseLeave={leave}
+            onClick={randomColor}
+          >Chat</Link>
           <Link className='link' to='/about' id='2' 
             style={index === 2 || locate.pathname === '/about'  ? style : null} 
             onMouseEnter={enter} onMouseLeave={leave}
