@@ -228,6 +228,8 @@ body {
 
   .other-body { top: 10vh; min-height: 79vh; }
 
+  .section-title { font-size: 36px; }
+
   .footer { margin-top: 10vh; }
 
   .width { width: 90%; }
@@ -238,7 +240,7 @@ body {
 
   .page-body { top: 8vh; padding-bottom: 8vh; }
 
-  .other-body { top: 8vh; min-height: 78vh; }
+  .other-body { top: 8vh; min-height: calc(76vh + 6px); }
 
   .footer { margin-top: 8vh; }
 

@@ -1,54 +1,49 @@
 import React from 'react'
 import '../styles/Projects.css'
 import Project from '../components/Project'
-import budgetBuddy from '../images/budgetbuddy.png'
-import myNotes from '../images/list.jpg'
-import porftolio from '../images/portfolio.png'
-import machine from '../images/machine.png'
-import pss from '../images/pss.png'
-import freenos from '../images/freenos.jpg'
+import { ProjectImages } from '../images'
 import Terminal from './Terminal'
 import Title from './Title'
 
 const Projects = () => {
   const projects = [
     {
-      image: budgetBuddy, 
+      image: ProjectImages.budgetBuddy, 
       title: 'Budget Buddy',
       git: 'https://github.com/Group-Saber/saber-budget-buddy',
       web: 'https://saber.andrewarteaga.com',
       text: 'Web applicaton to keep track of your budget and debt.'
     }, 
     {
-      image: myNotes,
+      image: ProjectImages.myNotes,
       title: 'My Notes',
       git: 'https://github.com/aarteaga53/my-notes',
       web: 'https://play.google.com/store/apps/details?id=com.arteagaapp.mynotes&pli=1',
       text: 'Mobile application to store and organize school notes.'
     },
     {
-      image: porftolio,
+      image: ProjectImages.porftolio,
       title: "Andrew's Portfolio",
       git: 'https://github.com/aarteaga53/portfolio',
       web: 'https://andrewarteaga.com',
       text: 'Web application to showcase my projects.'
     },
     {
-      image: machine,
+      image: ProjectImages.machine,
       title: 'Machine Learning',
       git: 'https://github.com/aarteaga53/facial_expression_recognition',
       web: 'https://www.kaggle.com/competitions/cs4210-summer2022-assignment-2/leaderboard',
       text: 'Facial expression recognition model using PyTorch.'
     },
     {
-      image: pss,
+      image: ProjectImages.pss,
       title: 'Personal Scheduling Service',
       git: 'https://github.com/aarteaga53/PSS',
       web: 'https://drive.google.com/file/d/1mV-pTcLFmogqo2GmOb0n3g1QJFoxiygt/view?usp=sharing',
       text: 'Java program to schedule tasks on a given day for a set time.'
     },
     {
-      image: freenos,
+      image: ProjectImages.freenos,
       title: 'FreeNOS',
       git: 'https://github.com/CS4310-Group-BrOs/FreeNOS',
       web: 'https://www.youtube.com/watch?v=kbUgqW4eEvI',

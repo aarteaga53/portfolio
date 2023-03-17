@@ -1,9 +1,16 @@
+import { useNavigate } from 'react-router-dom';
 import place from '../images/placeholder.png'
 
 const Project = ({project}) => {
+  let navigate = useNavigate()
+
+  let showSlides = () => {
+    navigate('/slideshow', { state: { set: project.title } })
+  }
+
   return (
     <div className='project-card'>
-      <img className='project-img' src={project.image || place} alt='project' />
+      <img className='project-img' src={project.image || place} alt='project' onClick={showSlides} />
       <div className='project-body'>
         <div className='project-title'>{project.title || 'Project'}</div>
         <div className='project-text'>{project.text || 'In progress...'}</div>

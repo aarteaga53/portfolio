@@ -3,7 +3,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
-    width: 60%;
+    width: 60vw;
 }
 
 .project-card {
@@ -16,13 +16,22 @@
 .project-img {
     width: 100%;
     height: 200px;
-    object-fit: cover;
+    object-fit: contain;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    margin-bottom: -4px;
+}
+
+.project-img:hover {
+    cursor: pointer;
 }
 
 .project-body {
     padding: 10px;
     border-top: 2px solid var(--red);
     background-color: var(--black);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
 }
 
 .project-title {
@@ -42,6 +51,47 @@
     background-color: var(--red);
     border-radius: 10px;
     box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
+}
+
+.slideshow {
+    position: relative;
+    height: 80vh;
+    width: 80vw;
+    background-color: var(--black);
+    border-radius: 20px;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+    border: none;
+}
+
+.slide-icons {
+    position: absolute;
+    width: 100%;
+    display: flex;
+}
+
+.left-icon {
+    margin-left: 25px;
+}
+
+.right-icon {
+    margin-left: auto;
+    margin-right: 25px;
+}
+
+.exit-icon {
+    position: fixed;
+    top: calc(5vh + 50px);
+    right: 50px;
 }
 
 .terminal:hover {
@@ -140,6 +190,14 @@
     .terminal { display: none;}
 
     .project-card { width: 100%; }
+
+    .slideshow { height: 60vh; width: 80vw; }
+
+    .left-icon { margin-left: 5px; }
+
+    .right-icon { margin-right: 5px; }
+
+    .exit-icon { top: calc(10vh + 5px); right: 5px; }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1800px)  {
@@ -148,4 +206,13 @@
     .terminal { width: 70%; height: 60vh; }
 
     .project-card { width: 25%; }
+
+    .slideshow { height: 70vh; width: 80vw; }
+
+    .left-icon { margin-left: 15px; }
+
+    .right-icon { margin-right: 15px; }
+
+    .exit-icon { top: calc(8vh + 25px); right: 25px; }
+
 }
