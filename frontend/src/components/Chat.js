@@ -8,13 +8,6 @@ const Chat = () => {
   let [chats, setChats] = useState([])
 
   useEffect(() => {
-    let getChats = () => {
-      const data = JSON.parse(window.localStorage.getItem('chats'))
-      setChats(data)
-    }
-
-    getChats()
-
     const targetNode = document.getElementById('chat-messages')
     const config = { attributes: true, childList: true, subtree: true }
 
@@ -49,7 +42,6 @@ const Chat = () => {
     data.who = 'bot'
     setChats(chats => [...chats, sentence, data])
     
-    window.localStorage.setItem('chats', JSON.stringify(chats))
     document.getElementById('sentence').value = ''
   }
 

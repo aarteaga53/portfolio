@@ -32,7 +32,7 @@ const Contact = () => {
 
   return (
     <div id='contact'>
-      <div className='page-body'>
+      <div className='other-body'>
         <Title title='Contact' section='section-title' />
         <form className='contact-body width' onSubmit={sendMessage}>
           <input className='contact-input' id='name' name='name' type='text' placeholder='Name' required></input>

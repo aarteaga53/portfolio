@@ -1,7 +1,7 @@
 :root {
   --black: #222222;
-  --white: white;
   --gray: #444444;
+  --mid-gray: #888888;
   --red: #d3273e;
   --orange: #e48305;
   --brick-red: #C45349;
@@ -13,7 +13,7 @@
 body {
   background-color: var(--black);
   background-image: linear-gradient(135deg, rgba(211, 39, 62, 0.1), var(--black) 50%);
-  color: var(--white);
+  color: white;
   font-family: 'Ubuntu', sans-serif;
   user-select: text;
   cursor: default;
@@ -62,7 +62,7 @@ body {
   display: block;
   font-size: 24px;
   font-weight: bold;
-  color: var(--white);
+  color: white;
   margin-left: 25px;
 }
 
@@ -83,13 +83,13 @@ body {
   margin-right: 10px;
   font-size: 18px;
   font-weight: bold;
-  color: var(--white);
+  color: white;
+  border-radius: 4px;
   padding: 10px;
   transition-duration: 0.3s;
 }
 
 .link:hover {
-  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -110,7 +110,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--white);
+  color: white;
   padding-top: 50px;
   padding-bottom: 5vh;
   z-index: 0;
@@ -139,7 +139,7 @@ body {
   font-size: 48px;
   font-weight: bold;
   margin-bottom: 50px;
-  color: var(--white);
+  color: white;
   display: flex;
 }
 
@@ -189,7 +189,7 @@ body {
 
 .profile-link {
   text-decoration: none;
-  color: var(--white);
+  color: white;
   margin-right: 25px;
   transition: 0.3s;
 }
@@ -220,13 +220,15 @@ body {
 
   .name { transition-duration: 1s; }
 
-  .links { display: none; margin-left: 25px; animation: links; animation-duration: 1s; }
+  .links { display: none; margin-left: 5px; animation: links; animation-duration: 1s; }
+
+  .link { margin-right: 5px; padding: 5px; }
 
   .nav-icon { display: block; }
 
   .page-body { top: 10vh; padding-bottom: 10vh; } 
 
-  .other-body { top: 10vh; min-height: 79vh; }
+  .other-body { top: 10vh; min-height: calc(79vh + 2px); }
 
   .section-title { font-size: 36px; }
 

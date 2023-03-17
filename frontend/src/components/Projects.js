@@ -53,7 +53,7 @@ const Projects = () => {
 
   return (
     <div id='projects'>
-      <div className='page-body'>
+      <div className='other-body'>
         <Title title='Projects' section='section-title' />
         <div className='projects'>
           {projects.map((project, index) => (

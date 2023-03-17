@@ -32,11 +32,11 @@ const About = () => {
 
   return (
     <div id='about'>
-      <div className='page-body' >
+      <div className='other-body' >
         <Title title='About' section='section-title' />
         {/* <img className='profile-img' src={headshot} alt='profile' /> */}
         <Title title='Software Engineer' section='about-sub' />
-        <div className='about-text width' id='about-text' ref={textRef}>    
+        <div className='about-text' id='about-text' ref={textRef}>    
           {isScrolledTo ? (
               <Typewriter 
                 onInit={(typewriter) => {
@@ -56,7 +56,7 @@ const About = () => {
               />
           ) : null}                 
         </div>
-        <div className='skills-col width'>
+        <div className='skills-col'>
           <Title title='Skills' section='skills-title' />
           <ul className='skills'>
             {skills.map((skill, index) => (
