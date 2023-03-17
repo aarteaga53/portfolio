@@ -44,16 +44,6 @@
     margin-top: 15px;
 }
 
-.terminal {
-    width: 50%;
-    height: 50vh;
-    margin-top: 100px;
-    background-color: var(--red);
-    border-radius: 10px;
-    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
-    margin-bottom: 5vh;
-}
-
 .slideshow {
     position: relative;
     height: 80vh;
@@ -93,96 +83,6 @@
     position: fixed;
     top: calc(5vh + 50px);
     right: 50px;
-}
-
-.terminal:hover {
-    cursor: text;
-}
-
-.terminal-panel {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    background-color: var(--black);
-    /* background-color: rgba(34, 34, 34, 0.8); */
-    border-bottom: 2px solid var(--red);
-    border-radius: 8px 8px 0 0;
-    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.8);
-}
-
-.terminal-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    margin-left: 25px;
-}
-
-.terminal-body {
-    height: calc(100% - 50px);
-    border-radius: 0 0 8px 8px;
-    background-color: var(--black);
-    padding: 10px;
-    box-sizing: border-box;
-    overflow: scroll;
-    overflow-x: hidden;
-    /* box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8); */
-}
-
-/* width */
-.terminal-body::-webkit-scrollbar {
-    width: 4px;
-}
-
-.terminal-body input {
-    position: relative;
-    width: calc(100% - 500px);
-    /* height: calc(100% - 20px); */
-    background-color: transparent;
-    color: white;
-    border: none;
-    resize: none;
-    caret-color: var(--brick-red);
-}
-
-.terminal-body input:focus {
-    outline: none;
-}
-
-.terminal-body pre {
-    font-size: 14px;
-    margin: 0 0 3px 0;
-    font-family: 'Ubuntu', sans-serif;
-    white-space: pre-wrap;
-}
-
-.terminal-body span {
-    font-size: 14px;
-}
-
-.welcome {
-    color: var(--brick-red);
-}
-
-.path {
-    color: var(--purple);
-}
-
-.command {
-    color: var(--purple)
-}
-
-.plain {
-    color: white;
-}
-
-.file {
-    color: var(--orange);
-    padding-left: 20px;
-}
-
-.pwd {
-    color: var(--green);
 }
 
 @media only screen and (max-width: 768px)  {

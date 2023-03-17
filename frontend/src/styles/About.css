@@ -21,6 +21,7 @@
     display: flex;
     flex-direction: column;
     width: 30%;
+    margin-bottom: 100px; 
 }
   
 .skills-title {
@@ -28,27 +29,47 @@
     font-weight: bold;
     display: flex;
     align-self: center;
+    margin-bottom: 25px;
 }
   
 .skills {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
+    justify-content: center;
+    gap: 10px;
+}
+
+.glass-tile {
+    position: relative;
+    transition: transform 0.5s;
+    /* border: 1px solid rgba(255, 255, 255, 0.4); */
+    /* border: 1px solid rgba(161, 153, 237, 0.4); */
+    border: 1px solid rgba(211, 39, 62, 0.4);
+    border-radius: 8px;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
+}
+
+.glass-tile:hover {
+    transform: scale(1.5);
+}
+
+.glass {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    /* background-color: rgba(161, 153, 237, 0.2); */
+    background-color: rgba(211, 39, 62, 0.2);
+    filter: blur(4px);
+    border-radius: 8px;
 }
   
 .skill {
-    transition: transform 0.5s;
+    position: relative;
     padding: 25px;
     z-index: 1;
     list-style-type: none;
-    text-shadow: 0px 0px 10px var(--purple);
-}
-
-.skill:hover {
-    transform: scale(1.5);
-    font-weight: bold;
-    color: var(--red);
-    cursor: pointer;
 }
   
 .profile-img {

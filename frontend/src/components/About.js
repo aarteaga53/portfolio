@@ -10,8 +10,8 @@ const About = () => {
   const skills = [
     'Java', 'Python', 'C', 'Dart', 'JavaScript', 'TypeScript', 'HTML',
     'CSS', 'Git', 'GitHub', 'Python Django', 'React.js', 'Node.js', 
-    'Express.js', 'Flutter', 'PyTorch', 'SQL', 'NoSQL', 'Firebase',
-    'MongoDB', 'AWS', 'Linux',
+    'Express.js', 'Flutter', 'PyTorch', 'SQL', 'NoSQL', 'MongoDB',
+    'Firebase', 'AWS EC2', 'Linux',
   ]
 
   useEffect(() => {
@@ -60,7 +60,10 @@ const About = () => {
           <Title title='Skills' section='skills-title' />
           <ul className='skills'>
             {skills.map((skill, index) => (
-              <li className='skill' key={index}>{skill}</li>
+              <div className='glass-tile'>
+                <div className='glass'></div>
+                <li className='skill' key={index}>{skill}</li>
+              </div>
             ))}
           </ul>
         </div>

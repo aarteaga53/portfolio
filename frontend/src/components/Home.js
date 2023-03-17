@@ -45,18 +45,21 @@ const Home = () => {
 
   return (
     <div className='other-body'>
-      <div className='chat-box'>
-        <div className='chat-msg' id='chat-msg'>
-          {chats.map((chat, index) => (
-            <div className={chat.who === 'user' ? 'chat-t chat-r' : 'chat-t chat-l'} key={index}>
-              {chat.sentence}
-            </div>
-          ))}
+      <div className='chat-glass-tile'>
+        <div className='chat-glass'></div>
+        <div className='chat-box'>
+          <div className='chat-msg' id='chat-msg'>
+            {chats.map((chat, index) => (
+              <div className={chat.who === 'user' ? 'chat-t chat-r' : 'chat-t chat-l'} key={index}>
+                {chat.sentence}
+              </div>
+            ))}
+          </div>
+          <form className='chat-f' onSubmit={chat}>
+            <input className='chat-ipt' id='sentence' name='sentence' type='text' autoComplete='off' required></input>
+            <button className='chat-i' type='submit'><SendIcon /></button>
+          </form>
         </div>
-        <form className='chat-f' onSubmit={chat}>
-          <input className='chat-ipt' id='sentence' name='sentence' type='text' autoComplete='off' required></input>
-          <button className='chat-i' type='submit'><SendIcon /></button>
-        </form>
       </div>
     </div>
   )
