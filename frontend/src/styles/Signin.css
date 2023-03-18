@@ -1,8 +1,25 @@
-.signin-box {
-    background-color: var(--black);
-    border: 2px solid var(--red);
-    border-radius: 4px;
+.sign-glass-tile {
+    position: relative;
     width: 20%;
+    border: 1px solid rgba(211, 39, 62, 0.4);
+    border-radius: 4px;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
+}
+
+.sign-glass {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(211, 39, 62, 0.2);
+    filter: blur(1px);
+    border-radius: 4px;
+}
+
+.signin-box {
+    position: relative;
+    /* background-color: var(--black); */
+    /* border: 2px solid var(--red); */
+    border-radius: 4px;
     box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
     display: flex;
     flex-direction: column;
@@ -25,27 +42,33 @@
 }
 
 .signin-input {
-    margin-bottom: 15px;
-    border: 2px solid var(--red); 
+    margin-bottom: 25px;
+    border: 1px solid rgba(211, 39, 62, 0.4); 
     border-radius: 4px;
     padding: 12px 20px;
-    background-color: var(--black);
+    background-color: transparent;
     color: white;
     font-size: 18px;
     transition-duration: 0.3s;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
 }
 
 .signin-input:focus {
     outline: none;
-    border: 2px solid var(--purple);
+    border: 1px solid rgba(161, 153, 237, 0.4);
+    /* border: 2px solid var(--purple); */
 }
 
 @media only screen and (max-width: 768px)  {
     .width { width: 90%; }
+
+    .sign-glass-tile { width: 90%; }
 
     .signin-title { font-size: 28px; }
 }
   
 @media only screen and (min-width: 769px) and (max-width: 1800px)  {
     .width { width: 40%; }
+
+    .sign-glass-tile { width: 40%; }
 }

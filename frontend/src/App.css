@@ -163,14 +163,9 @@ body {
   display: inline-block;
   border-radius: 4px;
   transition-duration: 0.4s;
-  margin-right: 15px;
   border: 2px solid var(--red);
   background-color: var(--black);
   color: var(--red);
-}
-
-.button:last-of-type {
-  margin-right: 0;
 }
 
 .button:hover {
@@ -182,6 +177,7 @@ body {
 .buttons {
   display: flex;
   justify-content: center;
+  gap: 15px;
   margin-bottom: 25px;
 }
 

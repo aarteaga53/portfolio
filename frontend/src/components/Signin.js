@@ -38,17 +38,20 @@ const Signin = ({token}) => {
       </div>
       <div className='other-body'>
         <Title title='Welcome Andrew' section='section-title' />
-        <form className='signin-box width' onSubmit={signin}>
-          <Title title='Sign In' section='signin-title' />
-          <div className='signin-inputs'>
-            <input className='signin-input' id='username' name='username' type='text' placeholder='Username'></input>
-            <input className='signin-input' id='password' name='password' type='password' placeholder='Password'></input>
-          </div>
-          <div className='buttons'>
-            <button className='button' type='button' onClick={() => navigate(-1)}>Back</button>
-            <button className='button' type='submit'>Sign In</button>
-          </div>
-        </form>
+        <div className='sign-glass-tile'>
+          <div className='sign-glass'></div>
+          <form className='signin-box' onSubmit={signin}>
+            <Title title='Sign In' section='signin-title' />
+            <div className='signin-inputs'>
+              <input className='signin-input' id='username' name='username' type='text' placeholder='Username'></input>
+              <input className='signin-input' id='password' name='password' type='password' placeholder='Password'></input>
+            </div>
+            <div className='buttons'>
+              <button className='project-btn' type='button' onClick={() => navigate(-1)}>Back</button>
+              <button className='project-btn' type='submit'>Sign In</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   )

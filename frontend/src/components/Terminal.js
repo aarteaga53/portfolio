@@ -188,17 +188,20 @@ const Terminal = () => {
   }
 
   return (
-    <div className='terminal' onClick={() => {inputRef.current.focus({preventScroll: true})}}>
-      <div className='terminal-panel'><div className='terminal-title'>Andrew's Terminal</div></div>
-      <div className='terminal-body' id='terminal-body'>
-        {display.map((line, index) => (
-          <pre className={line.class} key={index}>{line.msg}</pre>
-          ))}
-        <span className='path'>{path.substring(0, path.indexOf(':'))}</span>
-        <span>{path.charAt(path.indexOf(':'))}</span>
-        <span className='pwd'>{path.substring(path.indexOf(':') + 1, path.indexOf('$'))}</span>
-        <span>{path.substring(path.length - 2)}</span>
-        <input ref={inputRef} type='text' id='command' spellCheck={false} autoComplete='off' value={command} onChange={handleChange} onKeyDown={enterCommand} />
+    <div className='terminal-glass-tile'>
+      <div className='terminal-glass'></div>
+      <div className='terminal' onClick={() => {inputRef.current.focus({preventScroll: true})}}>
+        <div className='terminal-panel'><div className='terminal-title'>Andrew's Terminal</div></div>
+        <div className='terminal-body' id='terminal-body'>
+          {display.map((line, index) => (
+            <pre className={line.class} key={index}>{line.msg}</pre>
+            ))}
+          <span className='path'>{path.substring(0, path.indexOf(':'))}</span>
+          <span>{path.charAt(path.indexOf(':'))}</span>
+          <span className='pwd'>{path.substring(path.indexOf(':') + 1, path.indexOf('$'))}</span>
+          <span>{path.substring(path.length - 2)}</span>
+          <input ref={inputRef} type='text' id='command' spellCheck={false} autoComplete='off' value={command} onChange={handleChange} onKeyDown={enterCommand} />
+        </div>
       </div>
     </div>
   )
