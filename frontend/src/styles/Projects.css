@@ -74,21 +74,35 @@
     border: 1px solid rgba(211, 39, 62, 0.4);
     background-color: transparent;
     color: white;
-  }
+}
   
-  .project-btn:hover {
+.project-btn:hover {
     background-color: rgba(161, 153, 237, 0.2);
     border: 1px solid rgba(161, 153, 237, 0.4);
     cursor: pointer;
     box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
-  }
+}
+
+.slide-glass-tile {
+    position: relative;
+    border: 1px solid rgba(211, 39, 62, 0.4);
+    border-radius: 20px;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
+}
+
+.slide-glass {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(211, 39, 62, 0.2);
+    filter: blur(1px);
+    border-radius: 20px;
+}
 
 .slideshow {
     position: relative;
     height: 80vh;
     width: 80vw;
-    background-color: var(--black);
-    border-radius: 20px;
     box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
     display: flex;
     align-items: center;

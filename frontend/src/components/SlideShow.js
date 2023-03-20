@@ -71,33 +71,36 @@ const SlideShow = () => {
         <div className='name' onClick={back}>Andrew Arteaga</div>
       </div>
       <div className='other-body'>
-        <div className='slideshow'>
-          <div className='slide-icons'>
-            <div className='left-icon' onClick={decrease}>
-              <IconButton size='large' color='inherit'>
-                <KeyboardArrowLeftIcon fontSize='inherit' />
-              </IconButton>
+        <div className='slide-glass-tile'>
+          <div className='slide-glass'></div>
+          <div className='slideshow'>
+            <div className='slide-icons'>
+              <div className='left-icon' onClick={decrease}>
+                <IconButton size='large' color='inherit' sx={{ '&:hover': { backgroundColor: 'rgba(161, 153, 237, 0.4)' } }}>
+                  <KeyboardArrowLeftIcon fontSize='inherit' />
+                </IconButton>
+              </div>
+              <div className='right-icon' onClick={increase}>
+                <IconButton size='large' color='inherit' sx={{ '&:hover': { backgroundColor: 'rgba(161, 153, 237, 0.4)' } }}>
+                  <KeyboardArrowRightIcon fontSize='inherit' />
+                </IconButton>
+              </div>
             </div>
-            <div className='right-icon' onClick={increase}>
-              <IconButton size='large' color='inherit'>
-                <KeyboardArrowRightIcon fontSize='inherit' />
-              </IconButton>
-            </div>
+            {(locate.state.set === 'FreeNOS' && index === 0) || locate.state.set !== 'FreeNOS' ? 
+              (<img className='slide' src={slides[index]} alt='project slide' />) :
+              (<iframe
+                className='slide'
+                src={`https://www.youtube.com/embed/${slides[index]}`}
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                allowFullScreen
+                title='Embedded youtube'
+                />)
+              }
           </div>
-          {(locate.state.set === 'FreeNOS' && index === 0) || locate.state.set !== 'FreeNOS' ? 
-            (<img className='slide' src={slides[index]} alt='project slide' />) :
-            (<iframe
-              className='slide'
-              src={`https://www.youtube.com/embed/${slides[index]}`}
-              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-              allowFullScreen
-              title='Embedded youtube'
-            />)
-          }
         </div>
       </div>
       <div className='exit-icon' onClick={back}>
-        <IconButton size='large' color='inherit'>
+        <IconButton size='large' color='inherit' sx={{ '&:hover': { backgroundColor: 'rgba(211, 39, 62, 0.4)' } }}>
           <CloseIcon fontSize='inherit' />
         </IconButton>
       </div>
