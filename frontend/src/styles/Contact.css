@@ -4,11 +4,12 @@
 }
 
 .contact-input {
+    position: relative;
+    border: 1px solid rgba(211, 39, 62, 0.4); 
     margin-bottom: 25px;
-    border: 2px solid var(--red); 
     border-radius: 4px;
     padding: 12px 20px;
-    background-color: var(--black);
+    background-color: rgba(211, 39, 62, 0.2);
     color: white;
     font-size: 18px;
     transition-duration: 0.3s;
@@ -18,9 +19,23 @@
 
 .contact-input:focus {
     outline: none;
-    border: 2px solid var(--purple);
+    background-color: rgba(161, 153, 237, 0.2);
+    border: 1px solid rgba(161, 153, 237, 0.4);
+}
+
+.contact-input::placeholder {
+    color: white;
 }
 
 .contact-btn {
     box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
+    background-color: rgba(211, 39, 62, 0.2);
+    border: 1px solid rgba(211, 39, 62, 0.4);
+    color: white;
+}
+
+.contact-btn:hover {
+    background-color: rgba(161, 153, 237, 0.2);
+    border: 1px solid rgba(161, 153, 237, 0.4);
+    color: white;
 }

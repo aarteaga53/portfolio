@@ -52,6 +52,11 @@
 
 .glass-tile:hover {
     transform: scale(1.5);
+    border: 1px solid rgba(161, 153, 237, 0.4);
+}
+
+.glass-tile:hover .glass {
+    background-color: rgba(161, 153, 237, 0.2);
 }
 
 .glass {
@@ -63,6 +68,7 @@
     background-color: rgba(211, 39, 62, 0.2);
     filter: blur(4px);
     border-radius: 8px;
+    transition-duration: 0.5s;
 }
   
 .skill {
@@ -88,7 +94,7 @@
 
     .skills-col { width: 90%; }
 
-    .about-text { width: 90%; height: 20vh; }
+    .about-text { width: 90%; height: 30vh; }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1800px)  {
@@ -96,5 +102,5 @@
 
     .skills-col { width: 60%; }
 
-    .about-text { width: 60%; }
+    .about-text { width: 60%; height: 20vh; }
 }

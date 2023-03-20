@@ -1,9 +1,22 @@
-.msg-card {
-  margin-bottom: 25px;
+.msg-glass-tile {
+  position: relative;
+  border: 1px solid rgba(211, 39, 62, 0.4);
+  border-radius: 8px;
   box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
-  background-color: var(--black);
-  border: 2px solid var(--red);
-  border-radius: 4px;
+  margin-bottom: 25px;
+}
+
+.msg-glass {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(211, 39, 62, 0.2);
+  filter: blur(1px);
+  border-radius: 8px;
+}
+
+.msg-card {
+  position: relative;
 }
   
 .msg-heading {
@@ -11,7 +24,7 @@
   align-items: flex-end;
   padding: 25px;
   padding-bottom: 10px;
-  border-bottom: 2px solid var(--red);
+  border-bottom: 1px solid rgba(211, 39, 62, 0.4);
 }
 
 .msg-name {
@@ -26,7 +39,7 @@
 .msg-email {
   padding: 25px 10px 10px 10px;
   margin: 0 25px;
-  border-bottom: 2px solid var(--red);
+  border-bottom: 1px solid rgba(211, 39, 62, 0.4);
 }
 
 .msg-body {

@@ -77,14 +77,17 @@ const Admin = ({token, updateToken}) => {
       <div className='other-body'>
         <Title title='Messages' section='section-title' />
         {messages.map((msg, index) => (
-          <div className='msg-card width' key={index}>
-            <div className='msg-heading'>
-              <div className='msg-name'>{msg.name}</div>
-              <div className='msg-date'>{formatDate(new Date(msg.date))}</div>
-              <div className='icon' onClick={() => deleteMessage(index)}><DeleteIcon /></div>
+          <div className='msg-glass-tile width' key={index}>
+            <div className='msg-glass'></div>
+            <div className='msg-card'>
+              <div className='msg-heading'>
+                <div className='msg-name'>{msg.name}</div>
+                <div className='msg-date'>{formatDate(new Date(msg.date))}</div>
+                <div className='icon' onClick={() => deleteMessage(index)}><DeleteIcon /></div>
+              </div>
+              <div className='msg-email'>{msg.email}</div>
+              <pre className='msg-body'>{msg.message}</pre>
             </div>
-            <div className='msg-email'>{msg.email}</div>
-            <pre className='msg-body'>{msg.message}</pre>
           </div>
         ))}
       </div>
