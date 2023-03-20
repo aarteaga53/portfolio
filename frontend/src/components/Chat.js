@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import SendIcon from '@mui/icons-material/Send'
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import '../styles/Chat.css'
+import SendIcon from '@mui/icons-material/Send'
 
 const Chat = () => {
-  let [chats, setChats] = useState([])
+  let [chats, setChats] = useState([{ sentence: 'Hello, this is a language model based on me. You can ask me basic questions, interview questions, or other questions. I do have to warn you, I am very limited in responses.', who: 'bot' }])
 
   useEffect(() => {
-    const targetNode = document.getElementById('chat-messages')
+    const targetNode = document.getElementById('chat-msg')
     const config = { attributes: true, childList: true, subtree: true }
 
     const callback = (mutationList, observer) => {
@@ -29,8 +27,11 @@ const Chat = () => {
     event.preventDefault()
     const form = new FormData(event.currentTarget)
     const sentence = { sentence: form.get('sentence'), who: 'user' }
-    
-    let response = await fetch(`http://127.0.0.1:5000/chat`, {
+
+    setChats(chats => [...chats, sentence])
+    document.getElementById('sentence').value = ''
+
+    let response = await fetch(`http://127.0.0.1:5000/andrew`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json'
@@ -39,40 +40,28 @@ const Chat = () => {
     })
     
     let data = await response.json()
-    data.who = 'bot'
-    setChats(chats => [...chats, sentence, data])
-    
-    document.getElementById('sentence').value = ''
-  }
-
-  let popup = () => {
-    document.getElementById('popup').style.visibility = 'hidden'
-    document.getElementById('drop').style.visibility = 'visible'
-  }
-
-  let drop = () => {
-    document.getElementById('drop').style.visibility = 'hidden'
-    document.getElementById('popup').style.visibility = 'visible'
+    setChats(chats => [...chats, data])
   }
 
   return (
-    <div>
-      <div className='chat-body chat-header' id='drop'>
-        <div className='chat-drop'>
-          <div className='chat-name'>Chat</div>
-          <div className='chat-up' onClick={drop}><KeyboardArrowDownIcon /></div>
+    <div className='other-body'>
+      <div className='chat-glass-tile'>
+        <div className='chat-glass'></div>
+        <div className='chat-box'>
+          <div className='chat-msg' id='chat-msg'>
+            {chats.map((chat, index) => (
+              <div className={chat.who === 'user' ? 'chat-t chat-r' : 'chat-t chat-l'} key={index}>
+                {chat.sentence}
+              </div>
+            ))}
+          </div>
+          <form className='chat-f' onSubmit={chat}>
+            <div className='chat-send'>
+              <input className='chat-ipt' id='sentence' name='sentence' type='text' autoComplete='off' required></input>
+              <button className='chat-i' type='submit'><SendIcon /></button>
+            </div>
+          </form>
         </div>
-        <div className='chat-messages' id='chat-messages'>
-          {chats.map((chat, index) => (<div className={chat.who === 'user' ? 'chat-text chat-right' : 'chat-text chat-left'} key={index}>{chat.sentence}</div>))}
-        </div>
-        <form className='chat-form' onSubmit={chat}>
-          <input className='chat-input' id='sentence' name='sentence' type='text' autoComplete='off' required></input>
-          <button className='chat-icon' type='submit'><SendIcon /></button>
-        </form>
-      </div>
-      <div className='chat-popup chat-header' id='popup'>
-        <div className='chat-name'>Chat</div>
-        <div className='chat-up' onClick={popup}><KeyboardArrowUpIcon /></div>
       </div>
     </div>
   )

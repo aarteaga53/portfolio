@@ -9,7 +9,7 @@ import SlideShow from './components/SlideShow'
 import Projects from './components/Projects'
 import About from './components/About'
 import Contact from './components/Contact'
-import Home from './components/Home'
+import Chat from './components/Chat'
 
 function App() {
   let [token, setToken] = useState(null)
@@ -44,7 +44,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Navigate to='/projects'></Navigate>}></Route>
-          <Route path='/chat' element={<Home />}></Route>
+          <Route path='/chat' element={<Chat />}></Route>
           <Route path='/projects' element={<Projects />}></Route>
           <Route path='/about' element={<About />}></Route>
           <Route path='/contact' element={<Contact />}></Route>
