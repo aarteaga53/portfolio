@@ -110,13 +110,13 @@
     margin-left: auto;
     margin-right: 25px;
     text-align: end;
-    background-color: var(--black);
+    background-color: var(--brick-red);
 }
 
 .chat-l {
     margin-left: 25px;
     margin-right: auto;
-    background-color: var(--gray);
+    background-color: var(--mono-red);
 }
 
 @media only screen and (max-width: 768px)  {

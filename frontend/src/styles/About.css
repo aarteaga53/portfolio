@@ -6,14 +6,31 @@
     transition: transform 0.5s;
     display: flex;
 }
+
+.about-glass-tile {
+    position: relative;
+    border: 1px solid rgba(211, 39, 62, 0.4);
+    border-radius: 8px;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
+    width: 30%;
+}
   
+.about-glass {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(211, 39, 62, 0.2);
+    filter: blur(1px);
+    border-radius: 8px;
+}
+
 .about-text {
+    position: relative;
     font-size: 18px;
     text-align: justify;
     text-justify: auto;
     display: flex;
-    width: 30%;
-    height: 15vh;
+    margin: 25px;
 }
 
 .skills-col {
@@ -94,7 +111,7 @@
 
     .skills-col { width: 90%; }
 
-    .about-text { width: 90%; height: 30vh; }
+    .about-glass-tile { width: 90%; }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1800px)  {
@@ -102,5 +119,5 @@
 
     .skills-col { width: 60%; }
 
-    .about-text { width: 60%; height: 20vh; }
+    .about-glass-tile { width: 60%; }
 }

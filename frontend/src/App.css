@@ -3,14 +3,31 @@
   --gray: #444444;
   --mid-gray: #888888;
   --red: #d3273e;
+  --mono-red: #de4f62;
   --orange: #e48305;
   --brick-red: #C45349;
   --light-gray: #e4e1e1;
   --purple: #a199ed;
-  --green: #46a846;
+  --green: #3ed327;
+  --blue: #273ed3;
+  --teal: #27d3bc;
 }
 
 body {
+  /* background: radial-gradient(
+      circle at 50% 0,
+      rgba(211, 39, 62, 0.8),
+      rgba(211, 39, 62, 0) 70.71%
+    ), radial-gradient(
+      circle at 6.7% 75%,
+      rgba(161, 153, 237, 0.8),
+      rgba(161, 153, 237, 0) 70.71%
+    ),
+    radial-gradient(
+        circle at 93.3% 75%,
+        rgba(39, 211, 188, 0.8),
+        rgba(39, 211, 188, 0) 70.71%
+      ) beige; */
   background-color: var(--black);
   background-image: linear-gradient(135deg, rgba(211, 39, 62, 0.1), var(--black) 50%);
   /* background-image: url(https://wallpaperaccess.com/full/17520.jpg);

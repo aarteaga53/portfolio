@@ -53,7 +53,7 @@ const Terminal = () => {
    */
   let enterCommand = async (e) => {   
     if(e.key === 'Enter') {
-      setDisplay(display => [...display, { msg: `${path} ${command}`, class: 'command'}])
+      setDisplay(display => [...display, { msg: `${path} ${command}`, class: 'path'}])
       setHistory(history => [...history, command])
       setIndex(history.length)
 
@@ -194,7 +194,18 @@ const Terminal = () => {
         <div className='terminal-panel'><div className='terminal-title'>Andrew's Terminal</div></div>
         <div className='terminal-body' id='terminal-body'>
           {display.map((line, index) => (
-            <pre className={line.class} key={index}>{line.msg}</pre>
+            <div key={index}>
+              {line.msg.includes('$') ? (
+                <div>
+                  <span className='path'>{line.msg.substring(0, line.msg.indexOf(':'))}</span>
+                  <span>{line.msg.charAt(line.msg.indexOf(':'))}</span>
+                  <span className='pwd'>{line.msg.substring(line.msg.indexOf(':') + 1, line.msg.indexOf('$'))}</span>
+                  <span>{line.msg.substring(line.msg.indexOf('$'))}</span>
+                </div>
+              ) : (
+                <pre className={line.class} key={index}>{line.msg}</pre>
+              )}
+            </div>
             ))}
           <span className='path'>{path.substring(0, path.indexOf(':'))}</span>
           <span>{path.charAt(path.indexOf(':'))}</span>

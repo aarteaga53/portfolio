@@ -13,6 +13,13 @@ const About = () => {
     'Express.js', 'Flutter', 'PyTorch', 'SQL', 'NoSQL', 'MongoDB',
     'Firebase', 'AWS EC2', 'Linux',
   ]
+  const about = "I am a recent Computer Science graduate and an aspiring software engineer. I am " +
+                "eager to break into the world of technology, where I can apply my skills and " +
+                "make an impact, no matter how small it may be. Throughout my journey, I hope " +
+                "to meet and work with people that share a similar enthusiasm, and we can learn " +
+                "from each other to become better programmers. I am fascinated by what the future " +
+                "of technology has to offer, and the possibility of being a part of it, gives me " +
+                "much excitement."
 
   useEffect(() => {
     /**
@@ -36,17 +43,13 @@ const About = () => {
         <Title title='About' section='section-title' />
         {/* <img className='profile-img' src={headshot} alt='profile' /> */}
         <Title title='Software Engineer' section='about-sub' />
-        <div className='about-text' id='about-text' ref={textRef}>    
-          {isScrolledTo ? (
+        <div className='about-glass-tile'>
+          <div className='about-glass'></div>
+          <div className='about-text' id='about-text' ref={textRef}>    
+            {isScrolledTo ? (
               <Typewriter 
-                onInit={(typewriter) => {
-                  typewriter.typeString("I am a recent Computer Science graduate and an aspiring software engineer. I am " +
-                  "eager to break into the world of technology, where I can apply my skills and " +
-                  "make an impact, no matter how small it may be. Throughout my journey, I hope " +
-                  "to meet and work with people that share a similar enthusiasm, and we can learn " +
-                  "from each other to become better programmers. I am fascinated by what the future " +
-                  "of technology has to offer, and the possibility of being a part of it, gives me " +
-                  "much excitement.")
+              onInit={(typewriter) => {
+                typewriter.typeString(about)
                   .changeDelay(1)
                   .start()
                 }}
@@ -54,7 +57,8 @@ const About = () => {
                   delay: 25,
                 }}
               />
-          ) : null}                 
+            ) : null}                 
+          </div>
         </div>
         <div className='skills-col'>
           <Title title='Skills' section='skills-title' />
