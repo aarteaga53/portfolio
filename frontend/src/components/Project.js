@@ -9,8 +9,8 @@ const Project = ({project}) => {
   }
 
   return (
-    <div className='project-glass-tile'>
-      <div className='project-glass'></div>
+    <div className='glass-tile project-tile'>
+      <div className='glass'></div>
       <div className='project-card'>
         <img className='project-img' src={project.image || place} alt='project' onClick={showSlides} />
         <div className='project-body'>

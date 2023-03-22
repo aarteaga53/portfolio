@@ -188,8 +188,8 @@ const Terminal = () => {
   }
 
   return (
-    <div className='terminal-glass-tile'>
-      <div className='terminal-glass'></div>
+    <div className='glass-tile terminal-tile'>
+      <div className='glass'></div>
       <div className='terminal' onClick={() => {inputRef.current.focus({preventScroll: true})}}>
         <div className='terminal-panel'><div className='terminal-title'>Andrew's Terminal</div></div>
         <div className='terminal-body' id='terminal-body'>

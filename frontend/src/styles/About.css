@@ -7,21 +7,9 @@
     display: flex;
 }
 
-.about-glass-tile {
-    position: relative;
-    border: 1px solid rgba(211, 39, 62, 0.4);
+.about-tile {
     border-radius: 8px;
-    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
     width: 30%;
-}
-  
-.about-glass {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(211, 39, 62, 0.2);
-    filter: blur(1px);
-    border-radius: 8px;
 }
 
 .about-text {
@@ -57,35 +45,18 @@
     gap: 10px;
 }
 
-.glass-tile {
-    position: relative;
+.skill-tile {
     transition: transform 0.5s;
-    /* border: 1px solid rgba(255, 255, 255, 0.4); */
-    /* border: 1px solid rgba(161, 153, 237, 0.4); */
-    border: 1px solid rgba(211, 39, 62, 0.4);
     border-radius: 8px;
-    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
 }
 
-.glass-tile:hover {
+.skill-tile:hover {
     transform: scale(1.5);
     border: 1px solid rgba(161, 153, 237, 0.4);
 }
 
-.glass-tile:hover .glass {
+.skill-tile:hover .glass {
     background-color: rgba(161, 153, 237, 0.2);
-}
-
-.glass {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    /* background-color: rgba(255, 255, 255, 0.2); */
-    /* background-color: rgba(161, 153, 237, 0.2); */
-    background-color: rgba(211, 39, 62, 0.2);
-    filter: blur(4px);
-    border-radius: 8px;
-    transition-duration: 0.5s;
 }
   
 .skill {
@@ -111,7 +82,7 @@
 
     .skills-col { width: 90%; }
 
-    .about-glass-tile { width: 90%; }
+    .about-tile { width: 90%; }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1800px)  {
@@ -119,5 +90,5 @@
 
     .skills-col { width: 60%; }
 
-    .about-glass-tile { width: 60%; }
+    .about-tile { width: 60%; }
 }

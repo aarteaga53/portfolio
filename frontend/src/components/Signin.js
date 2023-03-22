@@ -38,8 +38,8 @@ const Signin = ({token}) => {
       </div>
       <div className='other-body'>
         <Title title='Welcome Andrew' section='section-title' />
-        <div className='sign-glass-tile'>
-          <div className='sign-glass'></div>
+        <div className='glass-tile signin-tile'>
+          <div className='glass'></div>
           <form className='signin-box' onSubmit={signin}>
             <Title title='Sign In' section='signin-title' />
             <div className='signin-inputs'>

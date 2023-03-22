@@ -71,8 +71,8 @@ const SlideShow = () => {
         <div className='name' onClick={back}>Andrew Arteaga</div>
       </div>
       <div className='other-body'>
-        <div className='slide-glass-tile'>
-          <div className='slide-glass'></div>
+        <div className='glass-tile slide-tile'>
+          <div className='glass slide-glass'></div>
           <div className='slideshow'>
             <div className='slide-icons'>
               <div className='left-icon' onClick={decrease}>

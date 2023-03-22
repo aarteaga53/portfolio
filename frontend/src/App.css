@@ -2,15 +2,17 @@
   --black: #222222;
   --gray: #444444;
   --mid-gray: #888888;
-  --red: #d3273e;
-  --mono-red: #de4f62;
-  --orange: #e48305;
-  --brick-red: #C45349;
-  --light-gray: #e4e1e1;
   --purple: #a199ed;
+  --red: #d3273e;
+  --teal: #27d3bc;
   --green: #3ed327;
   --blue: #273ed3;
-  --teal: #27d3bc;
+  --mono-red: #de4f62;
+  --brick-red: #C45349;
+  --orange: #e48305;
+  --light-gray: #e4e1e1;
+  --rust: #C14543;
+  --sea: #43BFC1;
 }
 
 body {
@@ -29,7 +31,7 @@ body {
         rgba(39, 211, 188, 0) 70.71%
       ) beige; */
   background-color: var(--black);
-  background-image: linear-gradient(135deg, rgba(211, 39, 62, 0.1), var(--black) 50%);
+  /* background-image: linear-gradient(135deg, rgba(211, 39, 62, 0.1), var(--black) 50%); */
   /* background-image: url(https://wallpaperaccess.com/full/17520.jpg);
   background-size: cover; */
   color: white;
@@ -63,77 +65,6 @@ body {
   width: 30%;
 }
 
-.top-panel {
-  position: fixed;
-  top: 0;
-  height: 5vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  background-color: var(--black);
-  border-bottom: 2px solid var(--red);
-  box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
-  z-index: 1;
-}
-
-.name {
-  position: relative;
-  display: block;
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-  margin-left: 25px;
-}
-
-.name:hover {
-  cursor: pointer;
-}
-
-.links {
-  position: relative;
-  display: block;
-  margin-left: auto;
-  margin-right: 25px;
-}
-
-.link {
-  text-decoration: none;
-  margin-right: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  border-radius: 4px;
-  padding: 10px;
-  transition-duration: 0.3s;
-}
-
-.link:hover {
-  cursor: pointer;
-}
-
-.nav-icon {
-  position: relative;
-  display: none;
-  margin-left: auto;
-  margin-right: 15px;
-}
-
-.nav-icon #mui-icon {
-  color: white;
-}
-
-.page-body {
-  top: 5vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-  padding-top: 50px;
-  padding-bottom: 5vh;
-  z-index: 0;
-}
-
 .other-body {
   top: 5vh;
   min-height: calc(84vh + 10px);
@@ -143,6 +74,22 @@ body {
   align-items: center;
   padding-top: 50px;
   z-index: 0;
+}
+
+.glass-tile {
+  position: relative;
+  border: 1px solid rgba(211, 39, 62, 0.4);
+  /* border-radius: 8px; */
+  box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
+}
+
+.glass {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(211, 39, 62, 0.2);
+  filter: blur(1px);
+  /* border-radius: 8px; */
 }
 
 .footer {
@@ -230,18 +177,6 @@ body {
 }
 
 @media only screen and (max-width: 768px)  {
-  .top-panel { height: 10vh; }
-
-  .name { transition-duration: 1s; }
-
-  .links { display: none; margin-left: 5px; animation: links; animation-duration: 1s; }
-
-  .link { margin-right: 5px; padding: 5px; }
-
-  .nav-icon { display: block; }
-
-  .page-body { top: 10vh; padding-bottom: 10vh; } 
-
   .other-body { top: 10vh; min-height: calc(79vh + 2px); }
 
   .section-title { font-size: 36px; }
@@ -252,10 +187,6 @@ body {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1800px)  {
-  .top-panel { height: 8vh; }
-
-  .page-body { top: 8vh; padding-bottom: 8vh; }
-
   .other-body { top: 8vh; min-height: calc(76vh + 6px); }
 
   .footer { margin-top: 8vh; }

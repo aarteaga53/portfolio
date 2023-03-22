@@ -43,8 +43,8 @@ const About = () => {
         <Title title='About' section='section-title' />
         {/* <img className='profile-img' src={headshot} alt='profile' /> */}
         <Title title='Software Engineer' section='about-sub' />
-        <div className='about-glass-tile'>
-          <div className='about-glass'></div>
+        <div className='glass-tile about-tile'>
+          <div className='glass'></div>
           <div className='about-text' id='about-text' ref={textRef}>    
             {isScrolledTo ? (
               <Typewriter 
@@ -64,7 +64,7 @@ const About = () => {
           <Title title='Skills' section='skills-title' />
           <ul className='skills'>
             {skills.map((skill, index) => (
-              <div className='glass-tile'>
+              <div className='glass-tile skill-tile'>
                 <div className='glass'></div>
                 <li className='skill' key={index}>{skill}</li>
               </div>

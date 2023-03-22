@@ -77,8 +77,8 @@ const Admin = ({token, updateToken}) => {
       <div className='other-body'>
         <Title title='Messages' section='section-title' />
         {messages.map((msg, index) => (
-          <div className='msg-glass-tile width' key={index}>
-            <div className='msg-glass'></div>
+          <div className='glass-tile msg-tile width' key={index}>
+            <div className='glass'></div>
             <div className='msg-card'>
               <div className='msg-heading'>
                 <div className='msg-name'>{msg.name}</div>

@@ -45,8 +45,8 @@ const Chat = () => {
 
   return (
     <div className='other-body'>
-      <div className='chat-glass-tile'>
-        <div className='chat-glass'></div>
+      <div className='glass-tile chat-tile'>
+        <div className='glass'></div>
         <div className='chat-box'>
           <div className='chat-msg' id='chat-msg'>
             {chats.map((chat, index) => (

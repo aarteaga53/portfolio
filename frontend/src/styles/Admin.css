@@ -1,18 +1,6 @@
-.msg-glass-tile {
-  position: relative;
-  border: 1px solid rgba(211, 39, 62, 0.4);
+.msg-tile {
   border-radius: 8px;
-  box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
   margin-bottom: 25px;
-}
-
-.msg-glass {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(211, 39, 62, 0.2);
-  filter: blur(1px);
-  border-radius: 8px;
 }
 
 .msg-card {
