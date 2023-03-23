@@ -4,7 +4,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
 import CloseIcon from '@mui/icons-material/Close'
 import { IconButton } from '@mui/material'
-import { BudgetBuddySlides, MyNotesSlides, PortfolioSlides, MachineSlides, PSSSlides, FreeNOSSlides } from '../images'
+import { BudgetBuddySlides, MyNotesSlides, PortfolioSlides, TodoSlides, MachineSlides, PSSSlides, FreeNOSSlides } from '../images'
 
 const SlideShow = () => {
   let [slides, setSlides] = useState({})
@@ -25,6 +25,9 @@ const SlideShow = () => {
         break
       case 'Andrew\'s Portfolio':
         tempSet = PortfolioSlides
+        break
+      case 'Task Tracker':
+        tempSet = TodoSlides
         break
       case 'Machine Learning':
         tempSet = MachineSlides

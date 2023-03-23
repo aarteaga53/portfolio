@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../styles/Navbar.css'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import CloseIcon from '@mui/icons-material/Close'
 import MenuIcon from '@mui/icons-material/Menu'
 
@@ -10,7 +10,6 @@ const Navbar = () => {
   let [index, setIndex] = useState(-1)
   let [style, setStyle] = useState({color: contrast, backgroundColor: color})
   let [isActive, setIsActive] = useState(false)
-  let navigate = useNavigate()
   let locate = useLocation()
 
   /**
@@ -79,7 +78,7 @@ const Navbar = () => {
   return (
     <>
       <div className='top-panel'>
-        <div className='name' id='name' onClick={() => navigate('/signin')}>Andrew Arteaga</div>
+        <Link className='name' id='name' to='/signin'>Andrew Arteaga</Link>
         <div className='links' id='links'>
           <Link className='link' to='/projects' id='0' 
             style={index === 0 || locate.pathname === '/projects'  ? style : null} 

@@ -17,6 +17,7 @@ const Project = ({project}) => {
           <div className='project-title'>{project.title || 'Project'}</div>
           <div className='project-text'>{project.text || 'In progress...'}</div>
           <div className='project-buttons'>
+            <button className='project-btn' type='button' onClick={showSlides}>Demo</button>
             {project.git ? (<a className='project-btn' href={project.git} target='_blank' rel='noopener noreferrer'>GitHub</a>) : null}
             {project.web ? (<a className='project-btn' href={project.web} target='_blank' rel='noopener noreferrer'>Link</a>) : null}
           </div>

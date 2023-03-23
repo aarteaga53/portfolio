@@ -22,14 +22,14 @@ body {
       rgba(211, 39, 62, 0) 70.71%
     ), radial-gradient(
       circle at 6.7% 75%,
-      rgba(161, 153, 237, 0.8),
-      rgba(161, 153, 237, 0) 70.71%
+      rgba(62, 211, 39, 0.8),
+      rgba(62, 211, 39, 0) 70.71%
     ),
     radial-gradient(
-        circle at 93.3% 75%,
-        rgba(39, 211, 188, 0.8),
-        rgba(39, 211, 188, 0) 70.71%
-      ) beige; */
+      circle at 93.3% 75%,
+      rgba(39, 62, 211, 0.8),
+      rgba(39, 62, 211, 0) 70.71%
+    ) beige; */
   background-color: var(--black);
   /* background-image: linear-gradient(135deg, rgba(211, 39, 62, 0.1), var(--black) 50%); */
   /* background-image: url(https://wallpaperaccess.com/full/17520.jpg);
@@ -58,7 +58,7 @@ body {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #777;
+  background: var(--mid-gray);
 }
 
 .width {
