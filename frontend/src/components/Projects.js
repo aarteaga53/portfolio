@@ -8,6 +8,13 @@ import Title from './Title'
 const Projects = () => {
   const projects = [
     {
+      image: ProjectImages.porftolio,
+      title: "Andrew's Portfolio",
+      git: 'https://github.com/aarteaga53/portfolio',
+      web: 'https://andrewarteaga.com',
+      text: 'Web application to showcase my projects.'
+    },
+    {
       image: ProjectImages.budgetBuddy, 
       title: 'Budget Buddy',
       git: 'https://github.com/Group-Saber/saber-budget-buddy',
@@ -22,11 +29,10 @@ const Projects = () => {
       text: 'Mobile application to store and organize school notes.'
     },
     {
-      image: ProjectImages.porftolio,
-      title: "Andrew's Portfolio",
-      git: 'https://github.com/aarteaga53/portfolio',
-      web: 'https://andrewarteaga.com',
-      text: 'Web application to showcase my projects.'
+      image: ProjectImages.todo,
+      title: 'Task Tracker',
+      git: 'https://github.com/aarteaga53/todo',
+      text: 'Easily organize and access your tasks, activities, or appointments.'
     },
     {
       image: ProjectImages.machine,
@@ -39,7 +45,6 @@ const Projects = () => {
       image: ProjectImages.pss,
       title: 'Personal Scheduling Service',
       git: 'https://github.com/aarteaga53/PSS',
-      web: 'https://drive.google.com/file/d/1mV-pTcLFmogqo2GmOb0n3g1QJFoxiygt/view?usp=sharing',
       text: 'Java program to schedule tasks on a given day for a set time.'
     },
     {
@@ -53,7 +58,7 @@ const Projects = () => {
 
   return (
     <div id='projects'>
-      <div className='page-body'>
+      <div className='other-body'>
         <Title title='Projects' section='section-title' />
         <div className='projects'>
           {projects.map((project, index) => (

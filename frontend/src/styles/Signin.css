@@ -1,8 +1,10 @@
-.signin-box {
-    background-color: var(--black);
-    border: 2px solid var(--red);
-    border-radius: 4px;
+.signin-tile {
     width: 20%;
+    border-radius: 8px;
+}
+
+.signin-box {
+    position: relative;
     box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
     display: flex;
     flex-direction: column;
@@ -12,7 +14,7 @@
 .signin-title {
     font-size: 32px;
     font-weight: bold;
-    color: var(--white);
+    color: white;
     margin: 50px 0;
     display: flex;
 }
@@ -25,27 +27,41 @@
 }
 
 .signin-input {
-    margin-bottom: 15px;
-    border: 2px solid var(--red); 
+    margin-bottom: 25px;
+    border: 1px solid rgba(211, 39, 62, 0.4); 
     border-radius: 4px;
     padding: 12px 20px;
-    background-color: var(--black);
-    color: var(--white);
+    background-color: transparent;
+    color: white;
     font-size: 18px;
     transition-duration: 0.3s;
 }
 
 .signin-input:focus {
     outline: none;
-    border: 2px solid var(--purple);
+    border: 1px solid rgba(161, 153, 237, 0.4);
+    background-color: rgba(161, 153, 237, 0.2);
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
+}
+
+.signin-input:hover {
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
+}
+
+.signin-input::placeholder {
+    color: var(--white);
 }
 
 @media only screen and (max-width: 768px)  {
     .width { width: 90%; }
+
+    .signin-tile { width: 90%; }
 
     .signin-title { font-size: 28px; }
 }
   
 @media only screen and (min-width: 769px) and (max-width: 1800px)  {
     .width { width: 40%; }
+
+    .signin-tile { width: 40%; }
 }

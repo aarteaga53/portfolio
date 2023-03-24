@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import '../styles/Terminal.css'
 
 const Terminal = () => {
   let inputRef = useRef()
@@ -52,7 +53,7 @@ const Terminal = () => {
    */
   let enterCommand = async (e) => {   
     if(e.key === 'Enter') {
-      setDisplay(display => [...display, { msg: `${path} ${command}`, class: 'command'}])
+      setDisplay(display => [...display, { msg: `${path} ${command}`, class: 'path'}])
       setHistory(history => [...history, command])
       setIndex(history.length)
 
@@ -187,18 +188,32 @@ const Terminal = () => {
   }
 
   return (
-    <div className='terminal' onClick={() => {inputRef.current.focus({preventScroll: true})}}>
+    <div className='glass-tile terminal-tile'>
+      <div className='glass'></div>
+      <div className='terminal' onClick={() => {inputRef.current.focus({preventScroll: true})}}>
         <div className='terminal-panel'><div className='terminal-title'>Andrew's Terminal</div></div>
         <div className='terminal-body' id='terminal-body'>
-            {display.map((line, index) => (
+          {display.map((line, index) => (
+            <div key={index}>
+              {line.msg.includes('$') ? (
+                <div>
+                  <span className='path'>{line.msg.substring(0, line.msg.indexOf(':'))}</span>
+                  <span>{line.msg.charAt(line.msg.indexOf(':'))}</span>
+                  <span className='pwd'>{line.msg.substring(line.msg.indexOf(':') + 1, line.msg.indexOf('$'))}</span>
+                  <span>{line.msg.substring(line.msg.indexOf('$'))}</span>
+                </div>
+              ) : (
                 <pre className={line.class} key={index}>{line.msg}</pre>
+              )}
+            </div>
             ))}
-            <span className='path'>{path.substring(0, path.indexOf(':'))}</span>
-            <span>{path.charAt(path.indexOf(':'))}</span>
-            <span className='pwd'>{path.substring(path.indexOf(':') + 1, path.indexOf('$'))}</span>
-            <span>{path.substring(path.length - 2)}</span>
-            <input ref={inputRef} type='text' id='command' spellCheck={false} autoComplete='off' value={command} onChange={handleChange} onKeyDown={enterCommand} />
+          <span className='path'>{path.substring(0, path.indexOf(':'))}</span>
+          <span>{path.charAt(path.indexOf(':'))}</span>
+          <span className='pwd'>{path.substring(path.indexOf(':') + 1, path.indexOf('$'))}</span>
+          <span>{path.substring(path.length - 2)}</span>
+          <input ref={inputRef} type='text' id='command' spellCheck={false} autoComplete='off' value={command} onChange={handleChange} onKeyDown={enterCommand} />
         </div>
+      </div>
     </div>
   )
 }

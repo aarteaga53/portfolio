@@ -1,0 +1,103 @@
+.terminal-tile {
+    border-radius: 8px;
+    margin: 100px 0 5vh;
+}
+
+.terminal {
+    position: relative;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 8px;
+}
+
+.terminal:hover {
+    cursor: text;
+}
+
+.terminal-panel {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid rgba(211, 39, 62, 0.4);
+    border-radius: 8px 8px 0 0;
+}
+
+.terminal-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-left: 25px;
+}
+
+.terminal-body {
+    height: calc(100% - 54px);
+    border-radius: 0 0 8px 8px;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+/* width */
+.terminal-body::-webkit-scrollbar {
+    width: 4px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.terminal-body input {
+    position: relative;
+    width: calc(100% - 500px);
+    background-color: transparent;
+    color: white;
+    border: none;
+    resize: none;
+    caret-color: var(--brick-red);
+}
+
+.terminal-body input:focus {
+    outline: none;
+}
+
+.terminal-body pre {
+    font-size: 14px;
+    margin: 0 0 3px 0;
+    font-family: 'Ubuntu', sans-serif;
+    white-space: pre-wrap;
+}
+
+.terminal-body span {
+    font-size: 14px;
+}
+
+.welcome {
+    color: var(--brick-red);
+}
+
+.path {
+    color: var(--purple);
+}
+
+.plain {
+    color: white;
+}
+
+.file {
+    color: var(--orange);
+    padding-left: 20px;
+}
+
+.pwd {
+    color: var(--green);
+}
+
+@media only screen and (max-width: 768px)  {
+    .terminal { display: none;}
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1800px)  {
+    .terminal { width: 70vw; height: 60vh; margin-bottom: 8vh; }
+}

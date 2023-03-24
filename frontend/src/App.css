@@ -1,19 +1,40 @@
 :root {
   --black: #222222;
-  --white: white;
   --gray: #444444;
-  --red: #d3273e;
-  --orange: #e48305;
-  --brick-red: #C45349;
-  --light-gray: #e4e1e1;
+  --mid-gray: #888888;
   --purple: #a199ed;
-  --green: #46a846;
+  --red: #d3273e;
+  --teal: #27d3bc;
+  --green: #3ed327;
+  --blue: #273ed3;
+  --mono-red: #de4f62;
+  --brick-red: #C45349;
+  --orange: #e48305;
+  --light-gray: #e4e1e1;
+  --rust: #C14543;
+  --sea: #43BFC1;
 }
 
 body {
+  /* background: radial-gradient(
+      circle at 50% 0,
+      rgba(211, 39, 62, 0.8),
+      rgba(211, 39, 62, 0) 70.71%
+    ), radial-gradient(
+      circle at 6.7% 75%,
+      rgba(62, 211, 39, 0.8),
+      rgba(62, 211, 39, 0) 70.71%
+    ),
+    radial-gradient(
+      circle at 93.3% 75%,
+      rgba(39, 62, 211, 0.8),
+      rgba(39, 62, 211, 0) 70.71%
+    ) beige; */
   background-color: var(--black);
-  background-image: linear-gradient(135deg, rgba(211, 39, 62, 0.1), var(--black) 50%);
-  color: var(--white);
+  /* background-image: linear-gradient(135deg, rgba(211, 39, 62, 0.1), var(--black) 50%); */
+  /* background-image: url(https://wallpaperaccess.com/full/17520.jpg);
+  background-size: cover; */
+  color: white;
   font-family: 'Ubuntu', sans-serif;
   user-select: text;
   cursor: default;
@@ -37,7 +58,7 @@ body {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #777;
+  background: var(--mid-gray);
 }
 
 .width {
@@ -126,6 +147,22 @@ body {
   z-index: 0;
 }
 
+.glass-tile {
+  position: relative;
+  border: 1px solid rgba(211, 39, 62, 0.4);
+  /* border-radius: 8px; */
+  box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
+}
+
+.glass {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(211, 39, 62, 0.2);
+  filter: blur(1px);
+  /* border-radius: 8px; */
+}
+
 .footer {
   position: relative;
   display: flex;
@@ -138,7 +175,7 @@ body {
   font-size: 48px;
   font-weight: bold;
   margin-bottom: 50px;
-  color: var(--white);
+  color: white;
   display: flex;
 }
 
@@ -160,14 +197,9 @@ body {
   display: inline-block;
   border-radius: 4px;
   transition-duration: 0.4s;
-  margin-right: 15px;
   border: 2px solid var(--red);
   background-color: var(--black);
   color: var(--red);
-}
-
-.button:last-of-type {
-  margin-right: 0;
 }
 
 .button:hover {
@@ -179,6 +211,7 @@ body {
 .buttons {
   display: flex;
   justify-content: center;
+  gap: 15px;
   margin-bottom: 25px;
 }
 
@@ -188,7 +221,7 @@ body {
 
 .profile-link {
   text-decoration: none;
-  color: var(--white);
+  color: white;
   margin-right: 25px;
   transition: 0.3s;
 }
@@ -215,17 +248,7 @@ body {
 }
 
 @media only screen and (max-width: 768px)  {
-  .top-panel { height: 10vh; }
-
-  .name { transition-duration: 1s; }
-
-  .links { display: none; margin-left: 25px; animation: links; animation-duration: 1s; }
-
-  .nav-icon { display: block; }
-
-  .page-body { top: 10vh; padding-bottom: 10vh; } 
-
-  .other-body { top: 10vh; min-height: 79vh; }
+  .other-body { top: 10vh; min-height: calc(79vh + 2px); }
 
   .section-title { font-size: 36px; }
 
@@ -235,10 +258,6 @@ body {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1800px)  {
-  .top-panel { height: 8vh; }
-
-  .page-body { top: 8vh; padding-bottom: 8vh; }
-
   .other-body { top: 8vh; min-height: calc(76vh + 6px); }
 
   .footer { margin-top: 8vh; }
