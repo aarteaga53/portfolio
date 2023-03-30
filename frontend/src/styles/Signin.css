@@ -39,8 +39,8 @@
 
 .signin-input:focus {
     outline: none;
-    border: 1px solid rgba(161, 153, 237, 0.4);
-    background-color: rgba(161, 153, 237, 0.2);
+    border: 1px solid rgba(39, 211, 188, 0.4);
+    background-color: rgba(39, 211, 188, 0.2);
     box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
 }
 
