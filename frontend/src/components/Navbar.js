@@ -85,11 +85,11 @@ const Navbar = () => {
             onMouseEnter={enter} onMouseLeave={leave}
             onClick={randomColor}
           >Projects</Link>
-          {/* <Link className='link' to='/chat' id='1'
+          <Link className='link' to='/chat' id='1'
             style={index === 1 || locate.pathname === '/chat' ? style : null}
             onMouseEnter={enter} onMouseLeave={leave}
             onClick={randomColor}
-          >Chat</Link> */}
+          >Chat</Link>
           <Link className='link' to='/about' id='2' 
             style={index === 2 || locate.pathname === '/about'  ? style : null} 
             onMouseEnter={enter} onMouseLeave={leave}
