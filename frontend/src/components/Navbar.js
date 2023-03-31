@@ -61,15 +61,12 @@ const Navbar = () => {
    * toggle hides the links when screen is too small
    */
   let showLinks = () => {
-    var name = document.getElementById('name')
     var nav = document.getElementById('links')
 
-    if (nav.style.display === 'block') {
+    if (nav.style.display === 'flex') {
       nav.style.display = 'none'
-      name.style.display = 'block'
     } else {
-      nav.style.display = 'block'
-      name.style.display = 'none'
+      nav.style.display = 'flex'
     }
 
     setIsActive(!isActive)

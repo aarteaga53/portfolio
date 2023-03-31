@@ -27,14 +27,14 @@
 
 .links {
     position: relative;
-    display: block;
+    display: flex;
     margin-left: auto;
-    margin-right: 25px;
+    margin-right: 100px;
+    gap: 10px;
 }
 
 .link {
     text-decoration: none;
-    margin-right: 10px;
     font-size: 18px;
     font-weight: bold;
     color: white;
@@ -63,9 +63,21 @@
 
     .name { transition-duration: 1s; }
 
-    .links { display: none; margin-left: 5px; animation: links; animation-duration: 1s; }
+    .links { 
+        display: none; 
+        position: absolute;
+        flex-direction: column; 
+        margin: 0;
+        top: calc(10vh + 2px); 
+        background-color: var(--black);
+        width: 100vw;
+        gap: 10px;
+        padding: 10px 0;
+        border-bottom: 2px solid var(--red);
+        box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
+    }
 
-    .link { margin-right: 5px; padding: 5px; }
+    .link { margin: auto; }
 
     .nav-icon { display: block; }
 }
