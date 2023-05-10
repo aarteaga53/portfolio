@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import DeleteIcon from '@mui/icons-material/Delete'
 import '../styles/Admin.css'
 import Title from './Title'
-import PopupChat from './PopupChat'
 
 const Admin = ({token, updateToken}) => {
   let [messages, setMessages] = useState([])
@@ -91,7 +90,6 @@ const Admin = ({token, updateToken}) => {
           </div>
         ))}
       </div>
-      <PopupChat />
     </div>
   )
 }
