@@ -11,7 +11,7 @@ const About = () => {
     'Java', 'Python', 'C', 'Dart', 'JavaScript', 'TypeScript', 'HTML',
     'CSS', 'Git', 'GitHub', 'Bitbucket', 'Python Django', 'React.js', 'Node.js', 
     'Express.js', 'Flutter', 'PyTorch', 'SQL', 'NoSQL', 'MongoDB',
-    'Firebase', 'AWS EC2', 'Linux', 'Notion'
+    'Firebase', 'AWS EC2', 'Linux', 'Ubuntu', 'Notion'
   ]
   const about = "I am a recent Computer Science graduate and an aspiring software engineer. I am " +
                 "eager to break into the world of technology, where I can apply my skills and " +
